@@ -46,7 +46,6 @@
       --bg: #000000;
       --fg: #ffffff;
       --muted: #8a8a8a;
-      --soft: #bdbdbd;
       --line: rgba(255, 255, 255, .14);
       --line-hi: rgba(255, 255, 255, .34);
       --gold: #C9A84C;
@@ -77,27 +76,78 @@
     a { color: inherit; }
     img { display: block; max-width: 100%; }
 
-    /* ---------- fondo de video ---------- */
+    /* ============ OVERLAY TIPOGRÁFICO ============ */
     .bg {
       position: absolute;
       inset: 0;
       overflow: hidden;
       z-index: -1;
-      background: #000000 url("https://i.pinimg.com/736x/ee/60/34/ee60342a54546dea70aeaf44fe09ac39.jpg") center / cover no-repeat;
+      background: #000000;
     }
 
-    .bg iframe {
+    .glyphs { position: absolute; inset: 0; }
+
+    .glyphs span {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 170vw;
-      height: 170vh;
-      min-width: 1200px;
-      min-height: 900px;
-      transform: translate(-50%, -50%) scale(1.1);
-      border: 0;
+      font-size: 11px;
+      line-height: 1;
+      color: #ffffff;
+      white-space: nowrap;
+      animation-name: blink;
+      animation-iteration-count: infinite;
+      animation-timing-function: steps(1, end);
+      will-change: opacity;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      4%       { opacity: var(--o); }
+      9%       { opacity: 0; }
+      12%      { opacity: var(--o); }
+      30%      { opacity: 0; }
+      33%      { opacity: var(--o); }
+      40%      { opacity: 0; }
+    }
+
+    .flash {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      font-size: clamp(15px, 3.4vw, 30px);
+      font-weight: 700;
+      letter-spacing: .5em;
+      white-space: nowrap;
+      color: #ffffff;
+      opacity: 0;
       pointer-events: none;
-      filter: grayscale(1) contrast(1.25) brightness(.5);
+      text-transform: uppercase;
+    }
+
+    .flash.on { animation: flash 1.5s steps(1, end) forwards; }
+
+    @keyframes flash {
+      0%   { opacity: 0; }
+      6%   { opacity: .5; }
+      14%  { opacity: .12; }
+      22%  { opacity: .45; }
+      46%  { opacity: .38; }
+      62%  { opacity: .06; }
+      70%  { opacity: .3; }
+      100% { opacity: 0; }
+    }
+
+    .scan {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, .035) 0px,
+        rgba(255, 255, 255, .035) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      mix-blend-mode: screen;
+      opacity: .6;
     }
 
     .bg::after {
@@ -106,10 +156,11 @@
       inset: 0;
       background:
         linear-gradient(to bottom,
-          rgba(0, 0, 0, .45) 0%,
-          rgba(0, 0, 0, .62) 38%,
-          rgba(0, 0, 0, .86) 68%,
+          rgba(0, 0, 0, .30) 0%,
+          rgba(0, 0, 0, .52) 40%,
+          rgba(0, 0, 0, .84) 70%,
           #000000 100%);
+      pointer-events: none;
     }
 
     .skip {
@@ -176,9 +227,7 @@
       padding: 0 var(--pad);
     }
 
-    .hero {
-      padding: clamp(72px, 13vw, 150px) 0 clamp(44px, 7vw, 80px);
-    }
+    .hero { padding: clamp(72px, 13vw, 150px) 0 clamp(44px, 7vw, 80px); }
 
     .eyebrow {
       font-size: 11px;
@@ -195,7 +244,7 @@
       font-weight: 700;
       max-width: 15ch;
       margin-bottom: 26px;
-      text-shadow: 0 2px 30px rgba(0, 0, 0, .9);
+      text-shadow: 0 2px 30px rgba(0, 0, 0, .95);
     }
 
     .lede {
@@ -225,7 +274,6 @@
     .cta:hover, .cta:focus-visible { background: #000000; color: var(--fg); }
     .cta svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
 
-    /* ---------- tarjetas ---------- */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -314,11 +362,12 @@
     @media (max-width: 560px) {
       h1 { max-width: 100%; }
       .card { min-height: 260px; }
-      .bg iframe { width: 260vw; height: 150vh; }
+      .glyphs span { font-size: 10px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; }
+      .glyphs span { animation: none; opacity: .18; }
       .card:hover .card-img { transform: none; }
     }
   </style>
@@ -328,12 +377,9 @@
   <a class="skip" href="#main">Saltar al contenido</a>
 
   <div class="bg" aria-hidden="true">
-    <iframe
-      src="https://assets.pinterest.com/ext/embed.html?id=482940760054728458"
-      title="Fondo animado de P$YCH0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-      tabindex="-1"></iframe>
+    <div class="glyphs" id="glyphs"></div>
+    <div class="flash" id="flash"></div>
+    <div class="scan"></div>
   </div>
 
   <header class="site-header">
@@ -411,5 +457,49 @@
     <span>P$YCH0 · 2026</span>
     <a href="https://discord.gg/2GCArGXFmH" target="_blank" rel="noopener noreferrer">discord.gg/2GCArGXFmH</a>
   </footer>
+
+  <script>
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const field = document.getElementById('glyphs');
+      const flash = document.getElementById('flash');
+
+      const POOL = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&/\\*+=<>[]{}';
+      const WORDS = ['P$YCH0', 'WE ARE AWAKE', 'LA OSCURIDAD', 'IDENTIDAD', '01001000', 'NO HAY SALIDA'];
+      const TOTAL = window.innerWidth < 560 ? 120 : 260;
+
+      for (let i = 0; i < TOTAL; i++) {
+        const s = document.createElement('span');
+        s.textContent = POOL[Math.floor(Math.random() * POOL.length)];
+        s.style.left = (Math.random() * 100).toFixed(2) + '%';
+        s.style.top = (Math.random() * 100).toFixed(2) + '%';
+        s.style.setProperty('--o', (0.05 + Math.random() * 0.22).toFixed(2));
+        s.style.animationDuration = (2.4 + Math.random() * 7).toFixed(2) + 's';
+        s.style.animationDelay = (-Math.random() * 8).toFixed(2) + 's';
+        field.appendChild(s);
+      }
+
+      if (reduce) return;
+
+      setInterval(function () {
+        const kids = field.children;
+        for (let i = 0; i < 6; i++) {
+          const k = kids[Math.floor(Math.random() * kids.length)];
+          k.textContent = POOL[Math.floor(Math.random() * POOL.length)];
+        }
+      }, 220);
+
+      function shoot() {
+        flash.textContent = WORDS[Math.floor(Math.random() * WORDS.length)];
+        flash.style.left = (22 + Math.random() * 56).toFixed(1) + '%';
+        flash.style.top = (18 + Math.random() * 64).toFixed(1) + '%';
+        flash.classList.remove('on');
+        void flash.offsetWidth;
+        flash.classList.add('on');
+        setTimeout(shoot, 2400 + Math.random() * 2200);
+      }
+      setTimeout(shoot, 900);
+    })();
+  </script>
 </body>
 </html>
