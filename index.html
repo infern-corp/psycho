@@ -1,0 +1,210 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { background: #000; }
+
+  .stage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 720px;
+    background: #000000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- estrella fugaz ---------- */
+  .sky {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    top: -12%;
+    left: -14%;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 6px 1px rgba(255, 255, 255, .55);
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .star::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    width: 140px;
+    height: 1px;
+    transform: translateY(-50%);
+    background: linear-gradient(to left, rgba(255,255,255,.75), rgba(201,168,76,.35) 35%, rgba(201,168,76,0));
+  }
+
+  .star.s1 {
+    animation: shoot-a 17s cubic-bezier(.35,.05,.5,.95) infinite;
+  }
+
+  .star.s2 {
+    width: 1px;
+    height: 1px;
+    box-shadow: 0 0 5px 1px rgba(201, 168, 76, .5);
+    animation: shoot-b 23s cubic-bezier(.4,.05,.55,.95) infinite;
+    animation-delay: 6.5s;
+  }
+
+  .star.s2::after {
+    width: 210px;
+    background: linear-gradient(to left, rgba(255,255,255,.5), rgba(201,168,76,.25) 40%, rgba(201,168,76,0));
+  }
+
+  @keyframes shoot-a {
+    0%   { transform: translate3d(0, 0, 0) rotate(33deg); opacity: 0; }
+    1%   { opacity: 0; }
+    5%   { opacity: .85; }
+    15%  { opacity: .85; }
+    19%  { transform: translate3d(122vw, 122vh, 0) rotate(33deg); opacity: 0; }
+    100% { transform: translate3d(122vw, 122vh, 0) rotate(33deg); opacity: 0; }
+  }
+
+  @keyframes shoot-b {
+    0%   { transform: translate3d(0, 0, 0) rotate(27deg); opacity: 0; }
+    1%   { opacity: 0; }
+    6%   { opacity: .5; }
+    18%  { opacity: .5; }
+    24%  { transform: translate3d(130vw, 115vh, 0) rotate(27deg); opacity: 0; }
+    100% { transform: translate3d(130vw, 115vh, 0) rotate(27deg); opacity: 0; }
+  }
+
+  /* ---------- núcleo ---------- */
+  .core {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    animation: rise 2.6s cubic-bezier(.22,.7,.2,1) both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .crest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .crest .rule {
+    display: block;
+    width: 44px;
+    height: 1px;
+    background: #C9A84C;
+    opacity: .38;
+  }
+
+  .monogram {
+    font-family: "Cinzel", "Times New Roman", serif;
+    font-size: clamp(17px, 3vw, 24px);
+    font-weight: 500;
+    letter-spacing: .48em;
+    padding-left: .48em;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  .monogram .dollar {
+    color: #C9A84C;
+    padding: 0 .06em;
+  }
+
+  .hairline {
+    width: 88px;
+    height: 1px;
+    margin: 46px auto 0;
+    background: linear-gradient(to right, transparent, rgba(201,168,76,.55), transparent);
+  }
+
+  .soon {
+    margin-top: 42px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(19px, 3.6vw, 32px);
+    line-height: 1.1;
+    letter-spacing: .62em;
+    padding-left: .62em;
+    white-space: nowrap;
+    color: #f4f4f4;
+    background-image: linear-gradient(100deg, #ffffff 38%, #C9A84C 50%, #ffffff 62%);
+    background-size: 280% 100%;
+    background-position: 120% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 11s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 130% 0; }
+    55%  { background-position: -30% 0; }
+    100% { background-position: -30% 0; }
+  }
+
+  .seal {
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin: 40px auto 0;
+    background: #C9A84C;
+    transform: rotate(45deg);
+    opacity: .55;
+  }
+
+  @media (max-width: 480px) {
+    .soon { letter-spacing: .42em; padding-left: .42em; }
+    .monogram { letter-spacing: .36em; padding-left: .36em; }
+    .crest .rule { width: 28px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .star, .soon, .core { animation: none; }
+    .star { opacity: .6; }
+    .soon { -webkit-text-fill-color: #f4f4f4; }
+  }
+</style>
+
+<div class="stage">
+  <div class="sky" aria-hidden="true">
+    <span class="star s1"></span>
+    <span class="star s2"></span>
+  </div>
+
+  <main class="core">
+    <div class="crest">
+      <span class="rule"></span>
+      <span class="monogram">P<span class="dollar">$</span>YCHO</span>
+      <span class="rule"></span>
+    </div>
+
+    <div class="hairline"></div>
+
+    <h1 class="soon">COMING SOON</h1>
+
+    <span class="seal"></span>
+  </main>
+</div>
