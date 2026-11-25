@@ -3,293 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- FIX 8: theme-color alineado con el fondo real (blanco); antes #0a0a0a no coincidía con la página -->
 <meta name="theme-color" content="#ffffff">
-
 <title>P S Y C H O_M A S I V E, Community — Entra a la oscuridad</title>
-<!-- FIX 15: description recortada a 152 caracteres (≤160) manteniendo la keyword "comunidad de Discord" -->
-<meta name="description" content="P S Y C H O_M A S I V E, Community: comunidad de Discord para explorar la oscuridad que yace en cada uno desde la estética y el pensamiento. Sin ruido. Entra.">
+<meta name="description" content="Comunidad de Discord para gente oscura: quienes no encajan y exploran su lado oscuro con estética y pensamiento, para vivir mejor. Entrada libre.">
 <meta name="author" content="P S Y C H O_M A S I V E, Community">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://infern-corp.github.io/psychomasive/">
 <link rel="alternate" hreflang="es" href="https://infern-corp.github.io/psychomasive/">
-<!-- FIX 7: x-default apunta a la misma URL a propósito: existe una sola versión de idioma (es) -->
 <link rel="alternate" hreflang="x-default" href="https://infern-corp.github.io/psychomasive/">
 
-<!-- FIX 9: lang="es" y og:locale="es_ES" son coherentes; el contenido es español neutro con variante España -->
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="P S Y C H O_M A S I V E, Community">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="P S Y C H O_M A S I V E, Community — Entra a la oscuridad">
-<meta property="og:description" content="Una invitación a explorar la oscuridad que yace en cada uno. Estética, sobria, enriquecedora. Comunidad de Discord con acceso libre.">
+<meta property="og:description" content="Una comunidad para quienes no encajan. Exploramos el lado oscuro con estética y cabeza. Entras sin pedir permiso.">
 <meta property="og:url" content="https://infern-corp.github.io/psychomasive/">
-<!-- OG image: única imagen externa (la subes tú) -->
 <meta property="og:image" content="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png">
-<!-- FIX 11: declarado el MIME real de la OG -->
 <meta property="og:image:type" content="image/png">
-<!-- TODO: confirmar dimensiones reales -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logotipo de P S Y C H O_M A S I V E, Community sobre fondo negro">
-
-<!-- Twitter -->
-<!-- FIX 12: sin cuentas oficiales en X/Twitter, se omiten twitter:site y twitter:creator para no inventar handles -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="P S Y C H O_M A S I V E, Community — Entra a la oscuridad">
-<meta name="twitter:description" content="Una invitación a explorar la oscuridad que yace en cada uno. Estética, sobria, enriquecedora. Comunidad de Discord con acceso libre.">
+<meta name="twitter:description" content="Una comunidad para quienes no encajan. Exploramos el lado oscuro con estética y cabeza. Entras sin pedir permiso.">
 <meta name="twitter:image" content="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png">
 <meta name="twitter:image:alt" content="Logotipo de P S Y C H O_M A S I V E, Community sobre fondo negro">
 
-<!-- FIX 13 (opcional): precarga de la OG para priorizar su descarga; elimina esta línea si no la usas en página -->
-<link rel="preload" as="image" href="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png" fetchpriority="high">
+<!-- Iconos inline: SVG, PNG de respaldo y apple-touch-icon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23fff' stroke-width='4'/%3E%3Ccircle cx='38' cy='32' r='16' fill='%230a0a0a'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAACiUlEQVR42u1Wv2vqUBQ+995EYlMkVJdCoaWlQ6bODjoIUsHFRdohk6XQv6Zj6VAQxCmduoiDgziIg+LUhg5dihBoQZofhRhzc99wQR6vrcZq4T14Z8oQzne+c77z3YM2NjbgJwPDD8e/DyBE/xUhNPtmjK0TgBCCEJpOp5RSAMAYC4IAAGEYrgqAMQYAx3EAQJblRCLBGPM8z7ZtjHE8Hl9IRZhf+Pv7exiGx8fHp6en2Wx2b28PAAzDaLVat7e3/X5fEIT5GMKc7I7jqKp6eXlZKBQA4OXlpdFoNBqN4XBoWZbneRjjbzIghLium06nm81mIpGoVqs3Nzf39/eWZc1aRwgRRXGxND5uMsZ4Mpns7+93u11BEM7Pz3VdBwBJkkRRRAiFYcgLj6KlTxgwxoIguLq62traOjk50XVdURRKaRiGXEUr7QEfbD6fz+VytVqNZ/d9f22bzDugaRoAXF9fE0K+UfWXM+DZCSEPDw/xePzw8NDzPEJI9L1dzIBSurm5ubOzYxjG29vbQpn/fW7KN2A0GqmqqihKEAS/e9yqAIwxURRd122326lUSlXV6XTK7WhtDBhjGON6vQ4AFxcXlFJCyCoAf647J/H4+JjJZEqlkmEYg8FAluX1yHShVcRiMe4T0aX1iWExxmKxmGmanU5H0zRN03Z3d19fX8fjsW3bvu9jjPnko8z/c0dkjEmS9PT0dHd3d3BwUC6Xz87OKpVKMpkcj8ee5/HUUXh8abkcwzTNer3e6/WCINje3i4Wi+Vy+ejoCCH0/PzMn4SlZ/DxyXRdlz+ZsiyLouj7vuM4CKEoLUJRLjuu1CAIKKVcx9EtJNJVMTsmZg1Z89mybNL/t+lS8QuJ00ShGQ283QAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
 
-<!-- Favicon SVG inline -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Cpath d='M22 46V18h11a8 8 0 0 1 0 16h-5' fill='none' stroke='%23fff' stroke-width='5'/%3E%3Cpath d='M38 46l8-13' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E">
-<!-- FIX 3: los PNG base64 son válidos estructuralmente (32×32 y 180×180, RGBA) pero monocromos: son placeholders.
-     El icono real y con marca es el SVG inline de arriba. Sustituir ambos data URI por PNG con el logo cuando exista archivo propio. -->
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVFhH7dYxDoAgDAXQn8TEwcE7eAAP4AE8gAfwAB7AA3gAD+ABPIDHcHBwcnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJy8gN4zwM1AAGl0m8TAAAAAElFTkSuQmCC">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADUSURBVHhe7dExAQAADMOg+TfdmcgByGZ3BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4zwM1AAGl0m8TAAAAAElFTkSuQmCC">
-
-<!-- FIX 1: no existe logo propio en el dominio, así que se mantiene el logo de Pinterest como ImageObject con width/height
-     y se añade "image" con la OG. Se documenta la deuda: mover el logo a /psychomasive/ y actualizar ambas rutas. -->
-<!-- Datos estructurados -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://infern-corp.github.io/psychomasive/#org",
-      "name": "P S Y C H O_M A S I V E, Community",
-      "alternateName": "P S Y C H O_M A S I V E",
-      "url": "https://infern-corp.github.io/psychomasive/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg",
-        "width": 1200,
-        "height": 1200
-      },
-      "image": "https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png",
-      "description": "Comunidad de Discord dedicada a explorar la oscuridad que yace en cada uno desde la estética y el pensamiento, con el objetivo de mejorar la calidad de vida de sus miembros.",
-      "sameAs": ["https://discord.gg/5W3ptXFvVA"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://infern-corp.github.io/psychomasive/#site",
-      "url": "https://infern-corp.github.io/psychomasive/",
-      "name": "P S Y C H O_M A S I V E, Community",
-      "inLanguage": "es",
-      "publisher": { "@id": "https://infern-corp.github.io/psychomasive/#org" }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://infern-corp.github.io/psychomasive/#webpage",
-      "url": "https://infern-corp.github.io/psychomasive/",
-      "name": "P S Y C H O_M A S I V E, Community — Entra a la oscuridad",
-      "inLanguage": "es",
-      "isPartOf": { "@id": "https://infern-corp.github.io/psychomasive/#site" },
-      "about": { "@id": "https://infern-corp.github.io/psychomasive/#org" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png",
-        "width": 1200,
-        "height": 630
-      },
-      "significantLink": ["https://discord.gg/5W3ptXFvVA"]
-    }
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://infern-corp.github.io/psychomasive/#org","name":"P S Y C H O_M A S I V E, Community","alternateName":"P S Y C H O_M A S I V E","url":"https://infern-corp.github.io/psychomasive/","logo":"https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg","image":"https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png","description":"Comunidad de Discord para quienes exploran su lado oscuro desde la estética y el pensamiento, con el objetivo de mejorar su calidad de vida.","sameAs":["https://discord.gg/5W3ptXFvVA"]},
+{"@type":"WebSite","@id":"https://infern-corp.github.io/psychomasive/#site","url":"https://infern-corp.github.io/psychomasive/","name":"P S Y C H O_M A S I V E, Community","inLanguage":"es","publisher":{"@id":"https://infern-corp.github.io/psychomasive/#org"}},
+{"@type":"WebPage","@id":"https://infern-corp.github.io/psychomasive/#webpage","url":"https://infern-corp.github.io/psychomasive/","name":"P S Y C H O_M A S I V E, Community — Entra a la oscuridad","inLanguage":"es","isPartOf":{"@id":"https://infern-corp.github.io/psychomasive/#site"},"about":{"@id":"https://infern-corp.github.io/psychomasive/#org"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png","width":1200,"height":630},"significantLink":["https://discord.gg/5W3ptXFvVA"]}]}
 </script>
 
 <style>
 :root{
-  --paper:#fff;--ink:#0a0a0a;--ink-2:#4d4d4d;--ink-3:#8c8c8c;
-  --line:#e4e4e4;--line-2:#c4c4c4;--max:1280px;--pad:clamp(20px,5vw,72px);
-  /* FIX 31: --logo declarado y consumido en .brand__mark como background de respaldo si el <img> no carga */
-  --logo:url("https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg");
-  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --paper:#fff;--ink:#0a0a0a;--ink-2:#4a4a4a;--ink-3:#6b6b6b;--line:#e2e2e2;--line-2:#bdbdbd;
+  --max:1280px;--pad:clamp(20px,5vw,72px);
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
-  font-size:clamp(15px,1.05vw,17px);line-height:1.6;letter-spacing:.005em;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-/* FIX 24: svg como bloque para evitar huecos de línea base en los SVG inline */
-svg{display:block}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font:clamp(15px,1.05vw,17px)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p,figure,blockquote,ul{margin:0}
+ul{padding:0;list-style:none}
+img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-h1,h2,h3,p,figure,blockquote{margin:0}
-ul,ol{margin:0;padding:0;list-style:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 ::selection{background:var(--ink);color:var(--paper)}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.site-foot a:focus-visible,.join a:focus-visible,.join .btn:focus-visible,
-.marquee a:focus-visible{outline-color:#fff}
-/* FIX 21: en el botón invertido (fondo blanco sobre sección negra) el outline blanco quedaría invisible sobre el propio botón:
-   se separa con outline-offset y se añade un anillo oscuro de refuerzo */
-.join .btn--inv:focus-visible{outline:2px solid #fff;outline-offset:4px;box-shadow:0 0 0 2px rgba(0,0,0,.9)}
-.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
-.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
-.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:var(--paper);
-  padding:14px 20px;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.dark :focus-visible{outline-color:#fff}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:#fff;padding:14px 20px}
 .skip:focus{left:12px;top:12px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.28;will-change:auto;
-  mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E")}
-
-/* Header */
-.site-head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.86);
-  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.site-head__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:66px}
-.brand{display:flex;align-items:center;gap:12px}
-/* FIX 6: object-fit:contain (el logo de Pinterest puede no ser cuadrado) + fondo blanco por si el logo es transparente.
-   FIX 31: background-image con --logo como respaldo si el <img> falla. */
-.brand__mark{width:34px;height:34px;flex:none;border:1px solid var(--ink);display:block;
-  background:#fff;background-image:var(--logo);background-size:contain;background-repeat:no-repeat;background-position:center;
-  color:var(--paper);object-fit:contain;object-position:center}
-.brand__name{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;line-height:1.1}
-.brand__name span{display:block;color:var(--ink-3);letter-spacing:.18em;font-size:.58rem;margin-top:3px}
-.nav{display:flex;align-items:center;gap:30px}
-.nav a{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ink-2);position:relative;padding-block:4px;transition:color .25s var(--ease)}
-.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--ink);
-  transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
-.nav a:hover{color:var(--ink)}
-.nav a:hover::after{transform:scaleX(1)}
+.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
 
 /* Botones */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;
-  border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--mono);
-  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
-  transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+  font:.68rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
 .btn:hover{background:var(--paper);color:var(--ink);transform:translateY(-2px)}
 .btn--ghost{background:transparent;color:var(--ink)}
 .btn--ghost:hover{background:var(--ink);color:var(--paper)}
 .btn--inv{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .btn--inv:hover{background:transparent;color:var(--paper)}
-.btn--lg{padding:20px 38px;font-size:.74rem;letter-spacing:.24em}
-.btn__arrow{width:14px;height:14px;flex:none;transition:transform .3s var(--ease)}
-.btn:hover .btn__arrow{transform:translate(3px,-3px)}
-.site-head .btn{padding:11px 18px}
+.btn--lg{padding:20px 38px;font-size:.74rem}
+.btn svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translate(3px,-3px)}
+
+/* Cabecera */
+.head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.head__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:66px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:34px;height:34px;object-fit:cover;border:1px solid var(--ink);background:#0a0a0a}
+.brand__name{font:.68rem/1.15 var(--mono);letter-spacing:.24em;text-transform:uppercase}
+.brand__name small{display:block;font-size:.58rem;letter-spacing:.18em;color:var(--ink-3);margin-top:3px}
+.nav{display:flex;gap:30px}
+.nav a{font:.66rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);padding-block:6px;position:relative;transition:color .25s}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.head .btn{padding:11px 18px}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero__ghost{position:absolute;inset:0;z-index:0;display:grid;place-items:center;pointer-events:none;overflow:hidden}
-/* FIX 4: height:auto explícito para no deformar; el preserveAspectRatio del SVG se ajusta en el marcado */
-.hero__ghost svg{width:min(105vw,1150px);max-width:none;height:auto;
-  filter:grayscale(1) contrast(1.1);opacity:.1;transform:translateY(-2%) scale(1.05)}
-.hero__in{position:relative;z-index:1;padding-block:clamp(56px,9vw,120px) clamp(40px,6vw,80px);
-  display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,5vw,56px)}
+.hero{position:relative;min-height:calc(100svh - 66px);display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+.hero__in{display:grid;gap:clamp(32px,5vw,56px);padding-block:clamp(48px,8vw,100px);width:100%}
 .hero__eyebrow{display:flex;align-items:center;gap:12px;color:var(--ink-2)}
-.hero__dot{width:7px;height:7px;background:var(--ink);flex:none;border-radius:50%;animation:pulse 2.6s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
-.hero__title{font-size:clamp(2.5rem,11.2vw,9.5rem);line-height:.86;letter-spacing:-.02em;
-  font-weight:700;text-transform:uppercase;margin-block:.14em}
-.hero__title-sub{display:block;font-weight:400;font-size:clamp(.72rem,2.1vw,1.5rem);
-  letter-spacing:.42em;line-height:1;margin-top:.9em;color:var(--ink-2);text-transform:uppercase}
-.hero__lede{max-width:52ch;font-size:clamp(1rem,1.6vw,1.22rem);line-height:1.62;color:var(--ink-2)}
-.hero__lede strong{color:var(--ink);font-weight:500}
-.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
-.hero__meta{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:26px;border-top:1px solid var(--line);color:var(--ink-3)}
-.hero__meta li{display:flex;align-items:center;gap:8px}
-.hero__meta svg{width:12px;height:12px;flex:none}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ink);animation:pulse 2.6s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
+.hero h1{font-size:clamp(1.7rem,12.5vw,9rem);line-height:.92;letter-spacing:-.02em;font-weight:700;margin-top:.5em}
+.hero h1 span{display:block;white-space:nowrap}
+.hero h1 small{display:block;font-weight:400;font-size:clamp(.72rem,2.1vw,1.4rem);letter-spacing:.42em;margin-top:1.2em;color:var(--ink-2);text-transform:uppercase}
+.lede{max-width:52ch;font-size:clamp(1rem,1.6vw,1.2rem);color:var(--ink-2)}
+.lede--hero{margin-top:32px}
+.lede strong{color:var(--ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero__meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-3)}
+.plate{position:relative;border:1px solid var(--ink);aspect-ratio:1;background:var(--ink);overflow:hidden;max-width:420px;width:100%}
+.plate svg{width:100%;height:100%}
+.plate figcaption{position:absolute;left:0;right:0;bottom:0;background:var(--paper);color:var(--ink);padding:11px 16px;font:.6rem/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;border-top:1px solid var(--ink)}
 
 /* Marquee */
-.marquee{overflow:hidden;border-bottom:1px solid var(--ink);background:var(--ink);color:var(--paper);padding-block:13px}
+.marquee{overflow:hidden;background:var(--ink);color:var(--paper);padding-block:13px}
 .marquee__track{display:flex;width:max-content;animation:slide 34s linear infinite}
 .marquee:hover .marquee__track{animation-play-state:paused}
-.marquee__seq{display:flex;align-items:center;flex:none}
-.marquee__seq span{font-family:var(--mono);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;padding-inline:26px;white-space:nowrap}
-.marquee__seq i{font-style:normal;opacity:.45;font-size:.6rem}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee__seq{display:flex;align-items:center}
+.marquee__seq span{font:.72rem/1 var(--mono);letter-spacing:.34em;text-transform:uppercase;padding-inline:26px;white-space:nowrap}
+.marquee__seq i{font-style:normal;opacity:.6;font-size:.6rem}
+@keyframes slide{to{transform:translateX(-50%)}}
 
 /* Secciones */
 .section{padding-block:clamp(64px,9vw,124px);border-bottom:1px solid var(--line)}
 .sec-head{display:grid;gap:18px;max-width:64ch;margin-bottom:clamp(36px,5vw,64px)}
-.sec-head__num{display:flex;align-items:center;gap:14px;color:var(--ink-3)}
-.sec-head__num::after{content:"";height:1px;flex:1;background:var(--line-2)}
-.sec-head h2{font-size:clamp(1.75rem,4.4vw,3.4rem);line-height:1.02;letter-spacing:-.02em;font-weight:700;text-transform:uppercase}
+.kicker{display:flex;align-items:center;gap:14px;color:var(--ink-3)}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line-2)}
+.sec-head h2{font-size:clamp(1.75rem,4.4vw,3.4rem);line-height:1.04;letter-spacing:-.02em;font-weight:700;text-transform:uppercase}
 .sec-head p{color:var(--ink-2);max-width:56ch}
-.manifesto{display:grid;gap:clamp(32px,5vw,64px);grid-template-columns:minmax(0,1fr)}
-.manifesto__text{display:grid;gap:22px;max-width:66ch}
-.manifesto__text p{font-size:clamp(1rem,1.35vw,1.1rem);line-height:1.72;color:var(--ink-2)}
-.manifesto__text p:first-child{font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.5;color:var(--ink)}
-.manifesto__text p:first-child::first-letter{font-weight:700}
-.pull{border-left:2px solid var(--ink);padding:6px 0 6px 24px;margin-block:8px;
-  font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.45;font-weight:500;letter-spacing:-.01em}
-.plate{position:relative;border:1px solid var(--ink);background:#f6f6f6;aspect-ratio:1/1;
-  overflow:hidden;display:grid;place-items:center;max-width:420px}
-/* FIX 25: el contenedor manda en el tamaño; los atributos width/height del SVG quedan como fallback */
-.plate svg{width:100%;height:100%;display:block}
-.plate__tag{position:absolute;bottom:0;left:0;right:0;background:var(--ink);color:var(--paper);
-  padding:11px 16px;font-family:var(--mono);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;
-  display:flex;justify-content:space-between;gap:12px}
-.pillars{display:grid;border-top:1px solid var(--line);grid-template-columns:minmax(0,1fr)}
-.pillar{border-bottom:1px solid var(--line);padding-block:clamp(28px,4vw,44px);display:grid;gap:14px;transition:background .3s var(--ease)}
-.pillar:hover{background:#fafafa}
+.manifesto{display:grid;gap:clamp(32px,5vw,64px)}
+.manifesto__text{display:grid;gap:22px;max-width:64ch}
+.manifesto__text p{line-height:1.72;color:var(--ink-2)}
+.manifesto__text p:first-child{font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.5;color:var(--ink)}
+.manifesto__text .pull{border-left:2px solid var(--ink);padding:6px 0 6px 24px;font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.45;font-weight:500;color:var(--ink)}
+.pillars{display:grid;border-top:1px solid var(--line)}
+.pillar{display:grid;gap:14px;padding-block:clamp(28px,4vw,44px);border-bottom:1px solid var(--line);transition:background .3s}
+.pillar:hover{background:#f7f7f7}
+.pillar svg{width:30px;height:30px}
 .pillar__top{display:flex;align-items:baseline;gap:16px}
-.pillar__idx{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--ink-3)}
-.pillar h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:700;letter-spacing:-.01em;text-transform:uppercase}
+.pillar__top span{color:var(--ink-3)}
+.pillar h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:700;text-transform:uppercase;letter-spacing:-.01em}
 .pillar p{color:var(--ink-2);max-width:46ch;font-size:.95rem}
-.pillar__ico{width:30px;height:30px;color:var(--ink)}
-.quote{display:grid;gap:24px;justify-items:start;max-width:70ch}
+.quote{display:grid;gap:24px;max-width:72ch}
 .quote blockquote{font-size:clamp(1.4rem,3.4vw,2.6rem);line-height:1.2;letter-spacing:-.02em;font-weight:700;text-transform:uppercase}
 .quote blockquote span{color:var(--ink-3)}
-.quote figcaption{font-family:var(--mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
+.quote figcaption{color:var(--ink-2)}
 
-/* Join */
-.join{background:var(--ink);color:var(--paper);border-bottom:1px solid var(--ink);position:relative;overflow:hidden}
-.join__grid{position:absolute;inset:0;opacity:.14;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
-  background-size:64px 64px;
-  mask-image:radial-gradient(circle at 70% 30%,#000 0%,transparent 72%);
-  -webkit-mask-image:radial-gradient(circle at 70% 30%,#000 0%,transparent 72%)}
-.join__in{position:relative;z-index:1;display:grid;gap:clamp(32px,5vw,60px);grid-template-columns:minmax(0,1fr);
-  padding-block:clamp(64px,9vw,124px)}
-.join__kicker{color:rgba(255,255,255,.65)}
-.join h2{font-size:clamp(2rem,6vw,4.4rem);line-height:.95;letter-spacing:-.025em;font-weight:700;text-transform:uppercase}
-.join__title{margin-top:18px}
-/* FIX 20: subido de .4 a .55 para superar 3:1 en texto grande sobre #0a0a0a */
-.join h2 span{color:rgba(255,255,255,.55)}
-.join__lede{color:rgba(255,255,255,.72);max-width:50ch;margin-top:20px}
-.join__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.join__note{margin-top:20px;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65)}
-.join__side{display:grid;gap:0;align-content:start}
-.join__side .mono{color:rgba(255,255,255,.65);padding-bottom:14px}
-.rules{border-top:1px solid rgba(255,255,255,.2)}
-.rule-item{display:flex;gap:18px;align-items:flex-start;padding-block:20px;border-bottom:1px solid rgba(255,255,255,.2)}
-.rule-item b{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;flex:none;padding-top:3px;opacity:1;color:rgba(255,255,255,.65);font-weight:400}
-.rule-item span{font-size:.95rem;line-height:1.55;color:rgba(255,255,255,.82)}
-.rule-item span strong{color:#fff;font-weight:500}
+/* Secciones oscuras */
+.dark{background:var(--ink);color:var(--paper)}
+.join{position:relative;overflow:hidden;padding-block:clamp(64px,9vw,124px)}
+.join__grid{position:absolute;inset:0;opacity:.14;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(circle at 70% 30%,#000,transparent 72%);mask-image:radial-gradient(circle at 70% 30%,#000,transparent 72%)}
+.join__in{position:relative;display:grid;gap:clamp(32px,5vw,60px)}
+.join .kicker{color:rgba(255,255,255,.7)}
+.join .kicker::after{background:rgba(255,255,255,.25)}
+.join h2{font-size:clamp(2rem,6vw,4.4rem);line-height:.95;letter-spacing:-.025em;font-weight:700;text-transform:uppercase;margin-top:18px}
+.join h2 span{color:rgba(255,255,255,.6)}
+.join .lede{color:rgba(255,255,255,.75);margin-top:20px}
+.note{margin-top:20px;color:rgba(255,255,255,.7)}
+.rules__label{color:rgba(255,255,255,.7);padding-bottom:14px}
+.rules{border-top:1px solid rgba(255,255,255,.22)}
+.rules li{display:flex;gap:18px;padding-block:20px;border-bottom:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:.95rem;line-height:1.55}
+.rules b{font:.66rem/1.9 var(--mono);letter-spacing:.16em;color:rgba(255,255,255,.7);font-weight:400}
+.rules strong{color:#fff;font-weight:500}
 
-/* Footer */
-.site-foot{background:var(--ink);color:var(--paper);padding-block:clamp(40px,6vw,64px)}
-.foot__top{display:grid;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.16);grid-template-columns:minmax(0,1fr)}
-.foot__brand{display:flex;align-items:center;gap:12px}
-.foot__brand .brand__mark{border-color:var(--paper);background:var(--paper);color:var(--ink)}
-.foot__brand .brand__name span{color:rgba(255,255,255,.65)}
-.foot__tagline{color:rgba(255,255,255,.65);max-width:34ch;margin-top:18px;font-size:.9rem}
+/* Pie */
+.foot{padding-block:clamp(40px,6vw,64px);border-top:1px solid rgba(255,255,255,.16)}
+.foot__top{display:grid;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.16)}
+.foot .brand img{border-color:#fff}
+.foot .brand__name small{color:rgba(255,255,255,.7)}
+.foot__tag{margin:18px 0 24px;max-width:36ch;color:rgba(255,255,255,.75);font-size:.92rem}
 .foot__cols{display:grid;gap:26px;grid-template-columns:repeat(2,minmax(0,1fr))}
-.foot__cols h3{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;
-  color:rgba(255,255,255,.65);margin-bottom:12px;font-weight:400}
+.foot__cols h3{font:400 .6rem/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px}
 .foot__cols li+li{margin-top:8px}
-.foot__cols a{font-size:.86rem;color:rgba(255,255,255,.75);transition:color .2s}
+.foot__cols a{font-size:.88rem;color:rgba(255,255,255,.8)}
 .foot__cols a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.foot__bot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;
-  padding-top:24px;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65)}
-.foot__bot a:hover{color:#fff}
-.foot__glyph{width:22px;height:22px;color:rgba(255,255,255,.5)}
+.foot__bot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;padding-top:24px;color:rgba(255,255,255,.7);font:.6rem/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase}
 
-/* Reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.rv.in{opacity:1;transform:none}
+/* Reveal: solo se oculta si hay JS */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
 
-/* Responsive */
 @media (min-width:720px){
   .pillars{grid-template-columns:repeat(3,minmax(0,1fr))}
   .pillar{border-bottom:0;border-right:1px solid var(--line);padding-inline:clamp(18px,2.4vw,32px)}
@@ -298,231 +187,161 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .foot__top{grid-template-columns:1.2fr 1fr;align-items:start}
 }
 @media (min-width:900px){
-  .hero__in{grid-template-columns:minmax(0,1fr) 340px;align-items:end}
-  .hero__ghost svg{width:min(78vw,980px);opacity:.1}
+  .hero__in{grid-template-columns:minmax(0,1fr) 340px;align-items:center}
+  .hero h1{font-size:clamp(3rem,7.4vw,6.4rem)}
   .manifesto{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);align-items:start}
-  .manifesto__aside{position:sticky;top:98px}
+  .manifesto .plate{position:sticky;top:98px}
   .join__in{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:start}
 }
-/* FIX 30: en móvil se oculta la nav de anclas a propósito; la cabecera conserva el CTA "Unirme" y el pie repite las secciones,
-   por lo que no queda ningún destino inaccesible. Se evita añadir JS de menú. */
 @media (max-width:719px){
-  .nav{display:none}
-  .brand__name span{display:none}
-  .site-head__in{height:58px}
-  .hero__cta .btn,.join__cta .btn{flex:1 1 100%}
+  .nav,.brand__name small{display:none}
+  .head__in{height:58px}
+  .cta .btn{flex:1 1 100%}
   .plate{max-width:none}
 }
-/* FIX 23: el grain es un SVG estático (sin animación), no provoca parpadeos; se desactivan solo las animaciones reales */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .marquee__track,.hero__dot{animation:none}
-  .rv{opacity:1;transform:none;transition:none}
+  .marquee__track,.dot{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
   .btn:hover{transform:none}
 }
-@media print{
-  .site-head,.marquee,.grain{display:none}
-  /* FIX 29: los SVG decorativos no se imprimen */
-  .plate svg,.hero__ghost svg{display:none}
-  body{color:#000;background:#fff}
-  .join,.site-foot{background:#fff;color:#000}
-  .join h2 span,.join__kicker,.join__lede,.join__note,.join__side .mono,
-  .rule-item b,.rule-item span,.rule-item span strong,.foot__tagline,
-  .foot__cols h3,.foot__cols a,.foot__bot,.foot__brand .brand__name span,
-  .quote figcaption{color:#000}
-  .join__grid{display:none}
-  .rules,.rule-item{border-color:#000}
-}
+@media print{.head,.marquee,.grain,.plate{display:none}.dark{background:#fff;color:#000}.dark *{color:#000!important}}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="grain" aria-hidden="true"></div>
 
-<!-- FIX 16: aria-label explícito en el enlace de salto -->
-<a class="skip" href="#main" aria-label="Saltar al contenido principal">Saltar al contenido</a>
-<!-- FIX 26: role="presentation" redundante con aria-hidden pero explícito -->
-<div class="grain" aria-hidden="true" role="presentation"></div>
-
-<header class="site-head">
-  <div class="wrap site-head__in">
-    <!-- FIX 33: se mantiene el aria-label del enlace (aporta "inicio") y el <img> pasa a alt="" para no duplicar el nombre accesible -->
+<header class="head">
+  <div class="wrap head__in">
     <a class="brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — inicio">
-      <!-- Logo real (única imagen externa junto a la OG) -->
-      <img class="brand__mark" src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg"
-           alt="" width="34" height="34" decoding="async">
-      <span class="brand__name">P S Y C H O_M A S I V E<span>, Community</span></span>
+      <img src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg" alt="" width="34" height="34" decoding="async">
+      <span class="brand__name">P S Y C H O_M A S I V E<small>, Community</small></span>
     </a>
-    <nav class="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Principal">
       <a href="#manifiesto">Manifiesto</a>
       <a href="#pilares">Pilares</a>
       <a href="#acceso">Acceso</a>
     </nav>
-    <a class="btn" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">
-      Unirme
-      <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg>
-      <span class="sr-only">(se abre en una pestaña nueva)</span>
-    </a>
+    <a class="btn" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Unirme<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
   </div>
 </header>
 
-<!-- FIX 22: main etiquetado por el h1 del hero -->
-<main id="main" tabindex="-1" aria-labelledby="hero-title">
+<main id="main" tabindex="-1">
 
-<section class="hero" id="top" aria-labelledby="hero-title">
-  <!-- Imagen decorativa generada inline (SVG) -->
-  <div class="hero__ghost" aria-hidden="true">
-    <!-- FIX 4: preserveAspectRatio slice para que el escalado CSS no deforme; focusable="false" verificado (FIX 17) -->
-    <svg viewBox="0 0 1200 1200" width="1200" height="1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-      <rect width="1200" height="1200" fill="#0a0a0a"/>
-      <g fill="none" stroke="#fff" stroke-width="90" stroke-linecap="square">
-        <path d="M340 900V340h220a150 150 0 0 1 0 300h-110"/>
-        <path d="M700 900l200-300"/>
-      </g>
-    </svg>
-  </div>
+<section class="hero" id="top" aria-labelledby="h1">
   <div class="wrap hero__in">
     <div>
-      <p class="hero__eyebrow mono"><span class="hero__dot" aria-hidden="true"></span>Comunidad de Discord · Acceso libre</p>
-      <h1 class="hero__title" id="hero-title">P S Y C H O_M A S I V E<span class="hero__title-sub">Community</span></h1>
-      <p class="hero__lede">Una invitación a explorar <strong>la oscuridad que yace en cada uno</strong>. Sin pose, sin ruido, sin algoritmo. Estética y pensamiento al servicio de algo concreto: <strong>mejorar tu vida y la de los demás</strong>.</p>
-      <div class="hero__cta">
-        <a class="btn btn--lg" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">
-          Entrar al Discord
-          <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg>
-          <span class="sr-only">(se abre en una pestaña nueva)</span>
-        </a>
+      <p class="hero__eyebrow mono"><span class="dot" aria-hidden="true"></span>Comunidad de Discord · Acceso libre</p>
+      <h1 id="h1"><span>P S Y C H O_</span><span>M A S I V E</span><small>Community</small></h1>
+      <p class="lede lede--hero">Un sitio para gente oscura. Para quienes nunca han encajado en lo convencional y han decidido <strong>mirar su lado oscuro de frente</strong>, con estética y con cabeza, para vivir mejor y no peor.</p>
+      <div class="cta">
+        <a class="btn btn--lg" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Entrar al Discord<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
         <a class="btn btn--ghost btn--lg" href="#manifiesto">Leer el manifiesto</a>
       </div>
       <ul class="hero__meta mono">
-        <li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4"/></svg>Abierto a todo el mundo</li>
-        <li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.4"/></svg>Sin requisitos previos</li>
-        <li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.4"/></svg>Entrada inmediata</li>
+        <li>Abierto a todo el mundo</li><li>Sin formularios</li><li>Sin entrevistas</li><li>Sin lista de espera</li>
       </ul>
     </div>
     <figure class="plate rv">
-      <!-- Pieza visual generada inline (SVG) -->
-      <!-- FIX 18: se elimina el aria-label (duplicaba el figcaption) y el role="img"; el figcaption describe la pieza -->
-      <!-- FIX 5: preserveAspectRatio meet + height 100% para respetar el aspect-ratio 1/1 del contenedor -->
-      <svg viewBox="0 0 400 400" width="400" height="400" preserveAspectRatio="xMidYMid meet" focusable="false">
-        <rect width="400" height="400" fill="#0a0a0a"/>
-        <circle cx="200" cy="200" r="140" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>
-        <circle cx="200" cy="200" r="96" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
-        <circle cx="200" cy="200" r="52" fill="none" stroke="#fff" stroke-width="2" opacity=".3"/>
-        <path d="M200 60v280M60 200h280" stroke="#fff" stroke-width="1" opacity=".35"/>
-        <g fill="none" stroke="#fff" stroke-width="18" stroke-linecap="square">
-          <path d="M150 270V140h52a38 38 0 0 1 0 76h-26"/>
-          <path d="M240 270l40-70"/>
-        </g>
+      <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <g fill="none" stroke="#fff"><circle cx="200" cy="190" r="150" opacity=".25"/><circle cx="200" cy="190" r="110" opacity=".4"/><circle cx="200" cy="190" r="70" opacity=".6"/><path d="M200 20v340M30 190h340" opacity=".25"/></g>
+        <circle cx="200" cy="190" r="56" fill="#fff"/><circle cx="222" cy="190" r="52" fill="#0a0a0a"/>
       </svg>
-      <figcaption class="plate__tag"><span>Identidad</span><span aria-hidden="true">Est. 01</span></figcaption>
+      <figcaption>Eclipse</figcaption>
     </figure>
   </div>
 </section>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee__track">
-    <div class="marquee__seq"><span>Oscuridad</span><i>✦</i><span>Estética</span><i>✦</i><span>Pensamiento</span><i>✦</i><span>Comunidad</span><i>✦</i><span>Sin ruido</span><i>✦</i><span>P S Y C H O_M A S I V E</span><i>✦</i></div>
-    <div class="marquee__seq"><span>Oscuridad</span><i>✦</i><span>Estética</span><i>✦</i><span>Pensamiento</span><i>✦</i><span>Comunidad</span><i>✦</i><span>Sin ruido</span><i>✦</i><span>P S Y C H O_M A S I V E</span><i>✦</i></div>
+    <div class="marquee__seq"><span>Oscuridad</span><i>✦</i><span>Estética</span><i>✦</i><span>Pensamiento</span><i>✦</i><span>Comunidad</span><i>✦</i><span>Sin ruido</span><i>✦</i></div>
+    <div class="marquee__seq"><span>Oscuridad</span><i>✦</i><span>Estética</span><i>✦</i><span>Pensamiento</span><i>✦</i><span>Comunidad</span><i>✦</i><span>Sin ruido</span><i>✦</i></div>
   </div>
 </div>
 
-<section class="section" id="manifiesto" aria-labelledby="mani-title">
+<section class="section" id="manifiesto" aria-labelledby="t-mani">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="sec-head__num mono">01 — Manifiesto</p>
-      <h2 id="mani-title">La oscuridad no es un tema.<br>Es un lugar.</h2>
+      <p class="kicker mono">01 — Manifiesto</p>
+      <h2 id="t-mani">La oscuridad no es una fase. Es parte de ti.</h2>
     </div>
     <div class="manifesto">
       <div class="manifesto__text rv">
-        <p>Todo el mundo tiene una parte que no enseña. Un cuarto sin luz, un pensamiento a las tres de la mañana, una versión de sí mismo que guarda para no incomodar. Aquí ese cuarto se abre.</p>
-        <p>P S Y C H O_M A S I V E, Community nace de una idea sencilla: lo oscuro no es lo contrario de lo bello, es una de sus formas. Lo que otros llaman rareza, aquí se trabaja con criterio, con referencias, con conversación de verdad.</p>
-        <p class="pull">No venimos a escapar de la oscuridad. Venimos a habitarla con estilo y a salir mejores de ella.</p>
-        <p>Por eso el objetivo es doble. Primero, estético: rodearnos de cosas bien hechas, imágenes que dicen algo, música que no rellena, textos que se quedan. Después, práctico: que todo eso mueva algo. Hábitos, disciplina, criterio, salud mental, proyectos propios.</p>
-        <p>No hay fórmula, no hay humo y no hay un gurú. Hay gente que piensa, comparte y construye. Si eso te describe, el enlace está más abajo.</p>
+        <p>Si alguna vez te han dicho que eres raro, que piensas demasiado o que te gusta lo que no toca, este es tu sitio. P S Y C H O_M A S I V E, Community es una comunidad para gente oscura: personas que no encajan y no tienen intención de fingir que sí.</p>
+        <p>Aquí lo oscuro no se esconde ni se presume. Se explora desde la estética y desde el pensamiento: imágenes, música, textos, ideas y conversaciones que valen la pena.</p>
+        <p class="pull">Explorar la oscuridad solo tiene sentido si sales de ahí mejor que como entraste.</p>
+        <p>Ese es el objetivo: que mirar hacia dentro, de forma estética y enriquecedora, mejore las condiciones y la calidad de vida de quienes estamos aquí. Sin humo, sin pose y sin gurús. Entra quien quiere entrar.</p>
       </div>
-      <aside class="manifesto__aside rv">
-        <figure class="plate">
-          <!-- Pieza visual generada inline (SVG) -->
-          <!-- FIX 19: mismo criterio que en el hero: sin aria-label duplicado, el figcaption describe -->
-          <!-- FIX 5: preserveAspectRatio meet + height 100% -->
-          <svg viewBox="0 0 400 400" width="400" height="400" preserveAspectRatio="xMidYMid meet" focusable="false">
-            <rect width="400" height="400" fill="#0a0a0a"/>
-            <g stroke="#fff" stroke-width="1" opacity=".4">
-              <path d="M0 80h400M0 160h400M0 240h400M0 320h400"/>
-              <path d="M80 0v400M160 0v400M240 0v400M320 0v400"/>
-            </g>
-            <g fill="none" stroke="#fff" stroke-width="14" stroke-linecap="square">
-              <path d="M160 280V120h56a40 40 0 0 1 0 80h-28"/>
-              <path d="M250 280l44-80"/>
-            </g>
-          </svg>
-          <figcaption class="plate__tag"><span>Archivo visual</span><span aria-hidden="true">01 / 01</span></figcaption>
-        </figure>
-      </aside>
+      <figure class="plate rv">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+          <g stroke="#fff" opacity=".3"><path d="M0 80h400M0 160h400M0 240h400M0 320h400M80 0v400M160 0v400M240 0v400M320 0v400"/></g>
+          <path d="M80 320V200a120 120 0 0 1 240 0v120z" fill="#fff"/>
+          <circle cx="200" cy="200" r="64" fill="#0a0a0a"/>
+        </svg>
+        <figcaption>Umbral</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="section" id="pilares" aria-labelledby="pil-title">
+<section class="section" id="pilares" aria-labelledby="t-pil">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="sec-head__num mono">02 — Pilares</p>
-      <h2 id="pil-title">Tres cosas que aquí<br>no se negocian</h2>
-      <p>La comunidad se sostiene sobre tres ejes. Todo lo demás —canales, eventos, debates— cuelga de ellos.</p>
+      <p class="kicker mono">02 — Pilares</p>
+      <h2 id="t-pil">Lo que sostiene esto</h2>
+      <p>Tres ideas. Los canales, los temas y los debates salen de ellas.</p>
     </div>
     <div class="pillars">
       <article class="pillar rv">
-        <svg class="pillar__ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.3"/><path d="M16 5v22M5 16h22" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="16" r="3.2" fill="currentColor"/></svg>
-        <div class="pillar__top"><span class="pillar__idx mono">01</span><h3>Estética</h3></div>
-        <p>Curaduría real: arte, fotografía, diseño, música. Lo feo también es bienvenido si está pensado. Nada de moodboards de relleno.</p>
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.3"/><path d="M16 5v22M5 16h22" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="16" r="3.2" fill="currentColor"/></svg>
+        <div class="pillar__top"><span class="mono">01</span><h3>Estética</h3></div>
+        <p>Arte, fotografía, diseño, música. Lo oscuro también puede estar bien hecho, y aquí se cuida. Lo feo vale si tiene intención.</p>
       </article>
       <article class="pillar rv">
-        <svg class="pillar__ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4v24M16 4l7 7M16 4l-7 7" stroke="currentColor" stroke-width="1.3"/><path d="M6 22h20" stroke="currentColor" stroke-width="1.3"/></svg>
-        <div class="pillar__top"><span class="pillar__idx mono">02</span><h3>Profundidad</h3></div>
-        <p>Conversaciones que duran más de un mensaje. Filosofía, psicología, cine, literatura. Se puede no estar de acuerdo sin romper nada.</p>
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4v24M16 4l7 7M16 4l-7 7" stroke="currentColor" stroke-width="1.3"/><path d="M6 22h20" stroke="currentColor" stroke-width="1.3"/></svg>
+        <div class="pillar__top"><span class="mono">02</span><h3>Profundidad</h3></div>
+        <p>Conversaciones que pasan del primer mensaje. Filosofía, psicología, cine, literatura. Se discrepa sin romper nada.</p>
       </article>
       <article class="pillar rv">
-        <svg class="pillar__ico" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="11" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3"/><circle cx="21" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 26c0-4.4 3.6-7 8-7s8 2.6 8 7M16 26c0-4.4 3.6-7 8-7s5 2.6 5 7" stroke="currentColor" stroke-width="1.3"/></svg>
-        <div class="pillar__top"><span class="pillar__idx mono">03</span><h3>Comunidad</h3></div>
-        <p>Gente que se reconoce y se sostiene. Se comparten avances, dudas y proyectos. Nadie llega a un vacío.</p>
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="11" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3"/><circle cx="21" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 26c0-4.4 3.6-7 8-7s8 2.6 8 7M16 26c0-4.4 3.6-7 8-7s5 2.6 5 7" stroke="currentColor" stroke-width="1.3"/></svg>
+        <div class="pillar__top"><span class="mono">03</span><h3>Comunidad</h3></div>
+        <p>Gente que se reconoce y se echa una mano. Cuentas lo que llevas entre manos y alguien te responde.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="quote-title">
+<section class="section" aria-labelledby="t-quote">
   <div class="wrap">
     <figure class="quote rv">
-      <p class="sec-head__num mono" id="quote-title">03 — Principio</p>
-      <blockquote>«Mira dentro. <span>Ahí está todo lo que necesitas</span> para empezar.»</blockquote>
-      <figcaption>Doctrina P S Y C H O_M A S I V E — línea 001</figcaption>
+      <p class="kicker mono" id="t-quote">03 — Principio</p>
+      <blockquote>«Mira dentro. <span>Ahí hay más de lo que crees.</span>»</blockquote>
+      <figcaption class="mono">P S Y C H O_M A S I V E</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="join" id="acceso" aria-labelledby="join-title">
+<section class="join dark" id="acceso" aria-labelledby="t-join">
   <div class="join__grid" aria-hidden="true"></div>
   <div class="wrap join__in">
-    <div>
-      <p class="mono join__kicker">04 — Acceso</p>
-      <h2 id="join-title" class="join__title">La puerta está<span> abierta.</span></h2>
-      <p class="join__lede">No hay formulario, ni entrevista, ni lista de espera. Entras, te presentas si quieres y ves de qué va esto. Si encaja, te quedas.</p>
-      <div class="join__cta">
-        <a class="btn btn--inv btn--lg" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">
-          Unirme a P S Y C H O_M A S I V E
-          <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg>
-          <span class="sr-only">(se abre en una pestaña nueva)</span>
-        </a>
+    <div class="rv">
+      <p class="kicker mono">04 — Acceso</p>
+      <h2 id="t-join">Quien quiere entrar,<span> entra.</span></h2>
+      <p class="lede">Sin formulario, sin entrevista, sin lista de espera. Pulsas, entras, te presentas si te apetece y ves si esto es lo tuyo.</p>
+      <div class="cta">
+        <a class="btn btn--inv btn--lg" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Unirme a P S Y C H O_M A S I V E<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
       </div>
-      <p class="join__note">Invitación permanente · Discord</p>
+      <p class="note mono">Invitación permanente · Discord</p>
     </div>
-    <div class="join__side">
-      <p class="mono">Convivencia mínima</p>
-      <!-- FIX 10: id="normas" para que el enlace del pie apunte al bloque real de normas -->
-      <ul class="rules" id="normas">
-        <li class="rule-item"><b>01</b><span><strong>Respeta el tono.</strong> Se puede discutir fuerte; no se puede faltar.</span></li>
-        <li class="rule-item"><b>02</b><span><strong>Aporta o pregunta.</strong> El silencio se respeta, el relleno no.</span></li>
-        <li class="rule-item"><b>03</b><span><strong>Nada de spam</strong> ni autopromo sin contexto.</span></li>
-        <li class="rule-item"><b>04</b><span><strong>Cuida la estética</strong> de lo que publicas. Es parte del sitio.</span></li>
+    <div class="rv">
+      <p class="rules__label mono" id="normas">Convivencia mínima</p>
+      <ul class="rules" aria-labelledby="normas">
+        <li><b>01</b><span><strong>Respeta a los demás.</strong> Se puede discutir fuerte, pero no faltar.</span></li>
+        <li><b>02</b><span><strong>Aporta o pregunta.</strong> Callar está bien; llenar de ruido, no.</span></li>
+        <li><b>03</b><span><strong>Nada de spam</strong> ni autopromoción fuera de contexto.</span></li>
+        <li><b>04</b><span><strong>Cuida lo que publicas.</strong> La estética es parte del sitio.</span></li>
       </ul>
     </div>
   </div>
@@ -530,72 +349,51 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 </main>
 
-<footer class="site-foot">
+<footer class="foot dark">
   <div class="wrap">
     <div class="foot__top">
       <div>
-        <!-- FIX 33: aria-label conservado aquí porque añade "volver arriba"; alt vacío en la imagen -->
-        <a class="brand foot__brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — volver arriba">
-          <!-- Logo real (única imagen externa junto a la OG) -->
-          <img class="brand__mark" src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg"
-               alt="" width="34" height="34" loading="lazy" decoding="async">
-          <span class="brand__name">P S Y C H O_M A S I V E<span>, Community</span></span>
+        <a class="brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — volver arriba">
+          <img src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg" alt="" width="34" height="34" loading="lazy" decoding="async">
+          <span class="brand__name">P S Y C H O_M A S I V E<small>, Community</small></span>
         </a>
-        <p class="foot__tagline">Explorar la oscuridad, con criterio. Mejorar la vida, con hechos.</p>
+        <p class="foot__tag">Explorar la oscuridad con criterio. Mejorar la vida con hechos.</p>
+        <a class="btn btn--inv" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Entrar al Discord<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
       </div>
       <div class="foot__cols">
         <div>
           <h3>Secciones</h3>
-          <ul>
-            <li><a href="#manifiesto">Manifiesto</a></li>
-            <li><a href="#pilares">Pilares</a></li>
-            <li><a href="#acceso">Acceso</a></li>
-          </ul>
+          <ul><li><a href="#manifiesto">Manifiesto</a></li><li><a href="#pilares">Pilares</a></li><li><a href="#acceso">Acceso</a></li></ul>
         </div>
         <div>
           <h3>Comunidad</h3>
-          <ul>
-            <li><a href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Discord</a></li>
-            <!-- FIX 10: "Normas" apunta ahora a #normas -->
-            <li><a href="#normas">Normas</a></li>
-            <li><a href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Contacto</a></li>
-          </ul>
+          <ul><li><a href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Discord</a></li><li><a href="#normas">Normas</a></li></ul>
         </div>
       </div>
     </div>
     <div class="foot__bot">
-      <span>© <span id="year"></span> P S Y C H O_M A S I V E, Community</span>
+      <span>© <span id="year">2026</span> P S Y C H O_M A S I V E, Community</span>
       <span>Hecho para mentes inquietas</span>
-      <svg class="foot__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.2"/></svg>
     </div>
   </div>
 </footer>
 
-<!-- FIX 27: el script permanece al final del body (equivale a defer); se mantiene el fallback de año -->
 <script>
-(function () {
-  var y = document.getElementById('year');
-  if (y) {
-    var yr;
-    try { yr = new Date().getFullYear(); } catch (err) { yr = NaN; }
-    y.textContent = isNaN(yr) ? '2026' : yr;
-  }
-
-  var items = document.querySelectorAll('.rv');
-  // FIX 28: se conserva el unobserve tras revelar y el atajo con reduced-motion / sin soporte
-  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    items.forEach(function (el) { el.classList.add('in'); });
+(function(){
+  /* Año del copyright */
+  var y=document.getElementById('year');
+  if(y){y.textContent=new Date().getFullYear()}
+  /* Reveal al hacer scroll */
+  var items=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('IntersectionObserver' in window)||reduce){
+    for(var i=0;i<items.length;i++)items[i].classList.add('in');
     return;
   }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-  items.forEach(function (el) { io.observe(el); });
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+  items.forEach(function(el){io.observe(el)});
 })();
 </script>
 </body>
