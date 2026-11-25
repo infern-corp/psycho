@@ -1,400 +1,447 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<title>P S Y C H O_M A S I V E, Community — Entra a la oscuridad</title>
-<meta name="description" content="Comunidad de Discord para gente oscura: quienes no encajan y exploran su lado oscuro con estética y pensamiento, para vivir mejor. Entrada libre.">
-<meta name="author" content="P S Y C H O_M A S I V E, Community">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://infern-corp.github.io/psychomasive/">
-<link rel="alternate" hreflang="es" href="https://infern-corp.github.io/psychomasive/">
-<link rel="alternate" hreflang="x-default" href="https://infern-corp.github.io/psychomasive/">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="P S Y C H O_M A S I V E, Community">
-<meta property="og:locale" content="es_ES">
-<meta property="og:title" content="P S Y C H O_M A S I V E, Community — Entra a la oscuridad">
-<meta property="og:description" content="Una comunidad para quienes no encajan. Exploramos el lado oscuro con estética y cabeza. Entras sin pedir permiso.">
-<meta property="og:url" content="https://infern-corp.github.io/psychomasive/">
-<meta property="og:image" content="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Logotipo de P S Y C H O_M A S I V E, Community sobre fondo negro">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="P S Y C H O_M A S I V E, Community — Entra a la oscuridad">
-<meta name="twitter:description" content="Una comunidad para quienes no encajan. Exploramos el lado oscuro con estética y cabeza. Entras sin pedir permiso.">
-<meta name="twitter:image" content="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png">
-<meta name="twitter:image:alt" content="Logotipo de P S Y C H O_M A S I V E, Community sobre fondo negro">
-
-<!-- Iconos inline: SVG, PNG de respaldo y apple-touch-icon -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23fff' stroke-width='4'/%3E%3Ccircle cx='38' cy='32' r='16' fill='%230a0a0a'/%3E%3C/svg%3E">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAACiUlEQVR42u1Wv2vqUBQ+995EYlMkVJdCoaWlQ6bODjoIUsHFRdohk6XQv6Zj6VAQxCmduoiDgziIg+LUhg5dihBoQZofhRhzc99wQR6vrcZq4T14Z8oQzne+c77z3YM2NjbgJwPDD8e/DyBE/xUhNPtmjK0TgBCCEJpOp5RSAMAYC4IAAGEYrgqAMQYAx3EAQJblRCLBGPM8z7ZtjHE8Hl9IRZhf+Pv7exiGx8fHp6en2Wx2b28PAAzDaLVat7e3/X5fEIT5GMKc7I7jqKp6eXlZKBQA4OXlpdFoNBqN4XBoWZbneRjjbzIghLium06nm81mIpGoVqs3Nzf39/eWZc1aRwgRRXGxND5uMsZ4Mpns7+93u11BEM7Pz3VdBwBJkkRRRAiFYcgLj6KlTxgwxoIguLq62traOjk50XVdURRKaRiGXEUr7QEfbD6fz+VytVqNZ/d9f22bzDugaRoAXF9fE0K+UfWXM+DZCSEPDw/xePzw8NDzPEJI9L1dzIBSurm5ubOzYxjG29vbQpn/fW7KN2A0GqmqqihKEAS/e9yqAIwxURRd122326lUSlXV6XTK7WhtDBhjGON6vQ4AFxcXlFJCyCoAf647J/H4+JjJZEqlkmEYg8FAluX1yHShVcRiMe4T0aX1iWExxmKxmGmanU5H0zRN03Z3d19fX8fjsW3bvu9jjPnko8z/c0dkjEmS9PT0dHd3d3BwUC6Xz87OKpVKMpkcj8ee5/HUUXh8abkcwzTNer3e6/WCINje3i4Wi+Vy+ejoCCH0/PzMn4SlZ/DxyXRdlz+ZsiyLouj7vuM4CKEoLUJRLjuu1CAIKKVcx9EtJNJVMTsmZg1Z89mybNL/t+lS8QuJ00ShGQ283QAAAABJRU5ErkJggg==">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQaElEQVR42u2da0xb9RvHfz3n9MadWnCES2CdI4xwEc2iYZPL5tBNFzDZYhjOkcgr927ROLPE6AunEhM1bjNqEI0zxohyG4IKFDaE6NzYGDTlsobLCGlZQVo4bc/pOf8XTzgh0EJH/LtxzvN9sRB22ml/n36f7++uCgsLIyhUIFH4EaAQDhTCgUI4UAgHCuFAIRwohAOFcKAQDhTCgUIhHCiEA4VwoBAOFMKBQjhQCAcK4UAhHCiEA4VCOFAIBwrhQCEcKIQDhXCgEA4UwoFCOFAIBwqFcKAQDhTCgUI4UAgH6r6KUeb/tmpZ8HPAZ0RRhD9BCIfMaaAoihAiCALHcX6/n+f5jT8ghqFpWq1WS69VDiuM7JmgaVoURY7jPB6P9Mu4uLiYmJgdO3bwPJ+WlpaSkiKKIlgI/DAxMWGz2RiGGR0dnZ+fdzgcEhA6nU6tVqtUKr/fL29KVLI8h1RigmVZsAeDwZCRkZGRkZGTk5Obm5uenh4REaHX6zd8K5Zl3W631Wrt7++/ceOGxWKxWCxOpxNMRa/Xy5gSucFBURRFUR6Px+fzEUJMJlNxcXF+fn5RUVFKSsqqhwVBkFJFwDIEb7jqryYmJjo7O3t6ejo6OsbGxgghGo1Gp9MJggBviHA8cKJpmhCyuLgoCEJycnJJScnhw4cLCwsjIyOlZ+ArLoWPYFF0bSyFqAEvlF61sLBgNpsbGxvb2tqmpqYoigoPD4d/BeF4gNyCEOJ2uwkheXl5x44dq6ioiI+PXwkEOMom3lxcIal3s+qtnE7n119//c033/T39xNCoNYgHPc/W1AU5Xa7RVE8ePBgeXn5kSNHNBqN9PVd+UW/VyAEQQiG1NzcnEqlgmegrIA/1dfX19XVNTU1+Xw+iqK2ehDZwr0VhmEgW+Tm5p4+ffro0aPwe57naZqGKnOvgtzAMIxkD0tLS0NDQ1NTU7du3RocHHQ6nSzLjoyMSNCoVCqe5x9++OHExESDwZCVlQXlJpR+MjrH/8swXC5XQkLCmTNnqqqq1Go1xIJNWwX4BLzW7/dfv3798uXL7e3tIyMjt2/fXtXSYE4rxXGc5BN6vZ6maRmE060HB03TPp/P6/VWVFR88MEHCQkJ0JybswrAQnptb29vQ0NDa2vr0NAQx3HgT1qtFrhZOWYarHcDRoKB9P6UkoWFhW3btn388cdQR/x+/ybcQooLgIXdbm9sbPz22297enp4nqcoCr79UvggitSWgQO+mm63u7Cw8MsvvzSZTPeKhSiKfr9/VXfUbrd/9tlnn3/++Z07dwgh4eHhUBEUC8TWg4OiKEEQPB7PqVOnzp49S9M0z/MMw4TOxKp+h8PhsFqtXV1d58+fn56elusolvzhkEJGTU1NZWUlWH0ogxYQUaU8MTU11d7e3tPTMzQ0NDo6arfbRVFUq9V6vV72syTyhIOmaZZlDQbDxYsX9+/fD93UDUvJyopjt9tbWlqam5u7u7sdDgc8oNVqYfIMAEIOtt44B5ARGxv7yy+/5OXlhVJKVrrFwMDAhQsXmpqapqamAIioqCjpGawgW9g5YP4sNja2tbU1Ly+P4zi1Wr3+SyR6Ojs733///e7ubpZlIU8ADWgScoCDoiie56Ojo1taWkLxDBjCIoSMjIxUV1fX1tZyHBcWFsYwDOYJWZUViAIejwfI2NAzAB2e56urqz/88MO7d+9GRETodLoQ13qhthgcS0tLNTU1RUVFPM+HQsbY2Ngrr7xiNpt1Ol1UVBQy8e/49wNHK8O43e7XXnutsrJy/WoCMYJhmJ9++ik/P99sNkdHR8MQCLarDDMHTdMul6ugoKC9vR06HcF6rdDXoCjq9ddfr66uhtSJWMgWDgihUVFRfX19qamp64x0SetuXn311fPnz0dGRmLXVOaZQ6VSeTye7777Li0tbZ1ZVoBgbm7u+PHjly5dioqKwv6IzDMHwzAul+ull14qKyuDYdBgngEeA2RER0fzPI9kyLmswBqImJiYgYEBo9EYrKDAFBrDMCdPnjx37lx0dDQsuUDJ2TkoivJ6ve+8805cXJw0nLVWQMYbb7xx7ty5qKgoJEP+zkFRFMuyu3btunbtGsyWBeyhQAppaGgoKyuLiIjAsXClOIcoim+//TbDMFI3ZG0IpWnaZrNVVVVptVrF7mxWFhw0TS8tLZWUlJSVlQXroQAKPp+vsrLS4XDAWmJsOUU4hyAIJ06cWMcMwDY++eSTrq6u6Oho2ewnw8yxQdrweDxZWVl//PGHVqslgfYnCoKgUqlsNtvu3buXlpZksFMInSNUOHieP3HiBMygBkwbkELee++9u3fvqtVqJEMRzqFSqTiOi4+Pv3btmtFoDGgbkEKuXLlSXFys1WoxaijFOWDZ8KFDh2BsI6BtwD6id999l+M4eWxNRjhCzaGEkNLS0nVyKEVRVqvVbDaHhYVhDlUKHCqVyuv1pqWl5efnrz3RQEobhJBPP/2UZdkQt6ig5AAHTdMcxz399NORkZEBoygs5pidna2vr9doNGgbCoIDXOGpp56Sfl4bRQkhra2td+7cgbXj2FSKgAP6KQaDobi4mCxvZV7byyWE1NfXS3vbUUqBw+v1ZmRkxMfHB5xMgSn7mZmZrq4ujUaDPVgFwQGjnJmZmcFOOIGa0t7ePjs7q9Fo0DkU15V99NFHgwUO8JKuri4S2oF/KPnAAbucs7Ozg7U9RVF+v39wcBB2N2EjKQUOWBFoNBp37txJAh0BCynE6XSOjY1hTVEcHH6/PyYmRq/XB2x4sIrbt287HA5Y/oONpCzn2LlzZ3h4eLCuCiHEarWus5gUJedAKl1gEEyTk5OYRhUKh8lkWr+r4nK5sG2UWFZCgeP69evBHkDJ3Dngvot1hNOwyoVjwzCBnqFcOFAIx+aNAfspyoVj7a0Dq4THsCgRDvAMuBot2F4Esjwth/6hROfYEI6VF7OhlAWHTqdb/4Hk5GTssyixrDAMMzw8vLi4GHAJINhJeno63JSALaQsOGianp+fZ1k22GIOQsj27dvj4uJ4nsfYoTjnmJ2dHR4eJssT9KucQxRFg8FgMpl8Ph/CoazMAUtHb968GSxVwJkLmZmZId6rgpJVICXLU2vrdFgKCgowkyoODtg2PTg4CItJA1oLIWTfvn1GoxEri7LgEEVRq9VaLBa73R6swyIIwrZt2woKCuBqZ2wnBcGhVqudTmdHRwdZ3qWy1l3I8h58dA5lZQ5o7+7u7mCxAyrLM888k5iY6PF4kA8FweH3+9Vq9W+//eZyueBu37X0+P1+o9FYWlrq8/k2d9s0akvCAbHDZrP19PQEu/AA3OLkyZN6vR4naZXVlV25jz7YA4IgpKenFxYWLi0toXkoCA6/36/RaC5duuRwOIIdIAlp9M0338RzBO+L6A3v4/z/SaPROByOpKSkJ554IuCYB2yaTU1NnZyc7Ovr0+v1OBX3n/Yb8JBa1IPoHKIoajSa8fHx7OzszMzMgOYBA2IPPfQQRVEtLS1hYWFoHoqAgywfYux2uysqKoJNswEfu3fvvnz5stVqxSPC5B9IpVgaFhbW1tb2888/0zQdcLQUbmDRaDRfffVVXFwcx3E4oK4IOKTmf+utt2BpT0BXgGSalpb2xRdfeL3eYBf2oGRVVsjygNjk5GRSUtLjjz8e7OQFKEC7du1iWbajowN7LoqAQ2r73t7el19+Odi5HWR5TP3AgQOzs7NXrlzBcKoUODQajdPpnJmZeeGFF4Kt84BqIorioUOHrl69OjAwgHwoAg5BEHQ63V9//ZWTkxOsW0uWV5iKovjss88ODg4ODAwEOz4K9S9kQbyuHPWgOwdZXpg+NzfX399//PhxICBY+ICrQ5977rmlpaXOzk4oTMiHbOEAPvR6/fDwsMfjKSkpCVZcyPJAuyiKBw4cyM7O7ujocDqdYWFhWGJkCweED61WazabU1JSHnvsMZ7n1+EDzibMzMwsKyu7efOm1WqlaRrvFpUtHCCGYX788ceCggKTycRx3DqLOSCpGI3GiooKvV5/9erV+fl5rVaLU3SyhYOiKIqimpubi4uLk5KS1vEPsrwsiKbpvXv3lpWVeTyev//+m2VZtVqNx9zKEA7YUutyuerq6vbt25eYmLi+f0AE4Xk+Li7u+eef37Nnz8zMzPj4OGzX1mg0ONy+tbuyAcilaZZlY2NjW1tb8/LyeJ7f8JRB6MUARgMDAxcuXGhqapqamiKEaLVaWDUCz6CjbG04JD4MBsPFixf379/P8zxN0xvaAHRz4DG73d7S0tLc3Nzd3e1wOOABrVarVqthPB4h2KpwkOUbaL1eb01NTWVlJXzpQ5m1X+kihJCpqan29vaenp6hoaHR0VG73S6KYkREBCKyheGQIqfH4zl16tTZs2dpmg6lxEjxBYxkJU8Oh2NwcPCjjz5qaGgghERERMCqAKw1WyCQrm1gyJVms7m7u3vv3r1GoxHuHN2wxMC9tTApA82vUqnCw8NTU1NffPHFPXv2OBwOi8Xi9XopioLoiohsJTgkRPR6vdVq/eGHH1JSUrKysqAihLj2ByiRQIGlyyaTqaKiIj8/n6bpiYmJubk5n88HfWDs4GwlOMjy5O3i4uL3338/Njb25JNPRkVFASL3tHZQshNgy2QylZaWlpeXJyYmer3e6elpt9sNpz/QNM0wDDwMuASb7gEF3N2JmeM//I9WqSiKcrlcCQkJZ86cqaqqgiFzCKqb+MZDIJWiq8Vi+f3337u6uvr6+hwOh3SMv0TJqvvFYBSf53m/3w/4ymOV65aEQ2oqj8fj8/lyc3NPnz599OhR+H2I3d1g0XXla//555+RkZHe3t7x8fFbt27ZbLaFhQWe52dnZ1e9Vq/Xx8bGGgyG7du39/b2BtsgjnD81xbidrtFUTx48GB5efmRI0fg7Gwwg80ZiSAIsJR1lQGwLOvxeBYXF0dGRuBkMwguarX6kUceUalUdXV1HR0dv/76qzx2fm9tOKSOLiHE7XYTQvLy8o4dO1ZRUREfHy+VDCg3m7B6GFOBOd513oFl2dra2tra2j///BNcRB5hVg5wSGNlhJDFxUVBEJKTk0tKSg4fPlxYWLjypGypKwvNHEoTQmmAQLMKkfn5ebPZ3NjY2NbWNj09DT1kOQ2pyQcOyUVgCy6kSJPJVFxcnJ+fX1RUlJKSsrZ8SPYQsPdBAt18OzEx0dnZ2dPT09HRAYe4azQanU4HVUZOH6bc4JCaFvIgy7JQ/g0GQ0ZGRkZGRk5OTm5ubnp6ekREhF6v3/CtWJZ1u91Wq7W/v//GjRsWi8VisTidTkjEUEHkOrQqTzjWUsJxnHRfqUqliouLi4mJ2bFjB8/zaWlpKSkp0qJl+GFiYsJmszEMMzo6Oj8/73A4pObX6XTSpJ28x1JlDseqMgE1QhAEjuP8fn8ofQqGYWDpofRa5Uz3KwWOgKysM+IpRVFxWQr8lBR6Qycu9gkp3eNHgEI4UAgHCuFAIRwohAOFcKAQDhTCgUI4UAgHCoVwoBAOFMKBQjhQCAcK4UAhHCiEA4VwoBAOFArhQCEcKIQDhXCgEA4UwoFCOFAIBwrhQCEcKBTCgUI4UAgHCuFAIRyo+6r/AW4KUB1G9yLAAAAAAElFTkSuQmCC">
-
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://infern-corp.github.io/psychomasive/#org","name":"P S Y C H O_M A S I V E, Community","alternateName":"P S Y C H O_M A S I V E","url":"https://infern-corp.github.io/psychomasive/","logo":"https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg","image":"https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png","description":"Comunidad de Discord para quienes exploran su lado oscuro desde la estética y el pensamiento, con el objetivo de mejorar su calidad de vida.","sameAs":["https://discord.gg/5W3ptXFvVA"]},
-{"@type":"WebSite","@id":"https://infern-corp.github.io/psychomasive/#site","url":"https://infern-corp.github.io/psychomasive/","name":"P S Y C H O_M A S I V E, Community","inLanguage":"es","publisher":{"@id":"https://infern-corp.github.io/psychomasive/#org"}},
-{"@type":"WebPage","@id":"https://infern-corp.github.io/psychomasive/#webpage","url":"https://infern-corp.github.io/psychomasive/","name":"P S Y C H O_M A S I V E, Community — Entra a la oscuridad","inLanguage":"es","isPartOf":{"@id":"https://infern-corp.github.io/psychomasive/#site"},"about":{"@id":"https://infern-corp.github.io/psychomasive/#org"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png","width":1200,"height":630},"significantLink":["https://discord.gg/5W3ptXFvVA"]}]}
-</script>
-
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050708'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-size='42' text-anchor='middle' fill='%23b6ff2e'%3E%26%23968;%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#fff;--ink:#0a0a0a;--ink-2:#4a4a4a;--ink-3:#6b6b6b;--line:#e2e2e2;--line-2:#bdbdbd;
-  --max:1280px;--pad:clamp(20px,5vw,72px);
-  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
-  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
-  --ease:cubic-bezier(.2,.7,.2,1);
-}
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--paper);color:var(--ink);font:clamp(15px,1.05vw,17px)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,p,figure,blockquote,ul{margin:0}
-ul{padding:0;list-style:none}
-img,svg{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--ink);color:var(--paper)}
-:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.dark :focus-visible{outline-color:#fff}
-.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
-.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:#fff;padding:14px 20px}
-.skip:focus{left:12px;top:12px}
-.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.22;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
-
-/* Botones */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
-  font:.68rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
-.btn:hover{background:var(--paper);color:var(--ink);transform:translateY(-2px)}
-.btn--ghost{background:transparent;color:var(--ink)}
-.btn--ghost:hover{background:var(--ink);color:var(--paper)}
-.btn--inv{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn--inv:hover{background:transparent;color:var(--paper)}
-.btn--lg{padding:20px 38px;font-size:.74rem}
-.btn svg{width:14px;height:14px;transition:transform .3s var(--ease)}
-.btn:hover svg{transform:translate(3px,-3px)}
-
-/* Cabecera */
-.head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.head__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:66px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:34px;height:34px;object-fit:cover;border:1px solid var(--ink);background:#0a0a0a}
-.brand__name{font:.68rem/1.15 var(--mono);letter-spacing:.24em;text-transform:uppercase}
-.brand__name small{display:block;font-size:.58rem;letter-spacing:.18em;color:var(--ink-3);margin-top:3px}
-.nav{display:flex;gap:30px}
-.nav a{font:.66rem/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);padding-block:6px;position:relative;transition:color .25s}
-.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
-.nav a:hover{color:var(--ink)}
-.nav a:hover::after{transform:scaleX(1)}
-.head .btn{padding:11px 18px}
-
-/* Hero */
-.hero{position:relative;min-height:calc(100svh - 66px);display:flex;align-items:center;border-bottom:1px solid var(--line);overflow:hidden}
-.hero__in{display:grid;gap:clamp(32px,5vw,56px);padding-block:clamp(48px,8vw,100px);width:100%}
-.hero__eyebrow{display:flex;align-items:center;gap:12px;color:var(--ink-2)}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--ink);animation:pulse 2.6s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
-.hero h1{font-size:clamp(1.7rem,12.5vw,9rem);line-height:.92;letter-spacing:-.02em;font-weight:700;margin-top:.5em}
-.hero h1 span{display:block;white-space:nowrap}
-.hero h1 small{display:block;font-weight:400;font-size:clamp(.72rem,2.1vw,1.4rem);letter-spacing:.42em;margin-top:1.2em;color:var(--ink-2);text-transform:uppercase}
-.lede{max-width:52ch;font-size:clamp(1rem,1.6vw,1.2rem);color:var(--ink-2)}
-.lede--hero{margin-top:32px}
-.lede strong{color:var(--ink);font-weight:500}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero__meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:32px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-3)}
-.plate{position:relative;border:1px solid var(--ink);aspect-ratio:1;background:var(--ink);overflow:hidden;max-width:420px;width:100%}
-.plate svg{width:100%;height:100%}
-.plate figcaption{position:absolute;left:0;right:0;bottom:0;background:var(--paper);color:var(--ink);padding:11px 16px;font:.6rem/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;border-top:1px solid var(--ink)}
-
-/* Marquee */
-.marquee{overflow:hidden;background:var(--ink);color:var(--paper);padding-block:13px}
-.marquee__track{display:flex;width:max-content;animation:slide 34s linear infinite}
-.marquee:hover .marquee__track{animation-play-state:paused}
-.marquee__seq{display:flex;align-items:center}
-.marquee__seq span{font:.72rem/1 var(--mono);letter-spacing:.34em;text-transform:uppercase;padding-inline:26px;white-space:nowrap}
-.marquee__seq i{font-style:normal;opacity:.6;font-size:.6rem}
-@keyframes slide{to{transform:translateX(-50%)}}
-
-/* Secciones */
-.section{padding-block:clamp(64px,9vw,124px);border-bottom:1px solid var(--line)}
-.sec-head{display:grid;gap:18px;max-width:64ch;margin-bottom:clamp(36px,5vw,64px)}
-.kicker{display:flex;align-items:center;gap:14px;color:var(--ink-3)}
-.kicker::after{content:"";flex:1;height:1px;background:var(--line-2)}
-.sec-head h2{font-size:clamp(1.75rem,4.4vw,3.4rem);line-height:1.04;letter-spacing:-.02em;font-weight:700;text-transform:uppercase}
-.sec-head p{color:var(--ink-2);max-width:56ch}
-.manifesto{display:grid;gap:clamp(32px,5vw,64px)}
-.manifesto__text{display:grid;gap:22px;max-width:64ch}
-.manifesto__text p{line-height:1.72;color:var(--ink-2)}
-.manifesto__text p:first-child{font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.5;color:var(--ink)}
-.manifesto__text .pull{border-left:2px solid var(--ink);padding:6px 0 6px 24px;font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.45;font-weight:500;color:var(--ink)}
-.pillars{display:grid;border-top:1px solid var(--line)}
-.pillar{display:grid;gap:14px;padding-block:clamp(28px,4vw,44px);border-bottom:1px solid var(--line);transition:background .3s}
-.pillar:hover{background:#f7f7f7}
-.pillar svg{width:30px;height:30px}
-.pillar__top{display:flex;align-items:baseline;gap:16px}
-.pillar__top span{color:var(--ink-3)}
-.pillar h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:700;text-transform:uppercase;letter-spacing:-.01em}
-.pillar p{color:var(--ink-2);max-width:46ch;font-size:.95rem}
-.quote{display:grid;gap:24px;max-width:72ch}
-.quote blockquote{font-size:clamp(1.4rem,3.4vw,2.6rem);line-height:1.2;letter-spacing:-.02em;font-weight:700;text-transform:uppercase}
-.quote blockquote span{color:var(--ink-3)}
-.quote figcaption{color:var(--ink-2)}
-
-/* Secciones oscuras */
-.dark{background:var(--ink);color:var(--paper)}
-.join{position:relative;overflow:hidden;padding-block:clamp(64px,9vw,124px)}
-.join__grid{position:absolute;inset:0;opacity:.14;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(circle at 70% 30%,#000,transparent 72%);mask-image:radial-gradient(circle at 70% 30%,#000,transparent 72%)}
-.join__in{position:relative;display:grid;gap:clamp(32px,5vw,60px)}
-.join .kicker{color:rgba(255,255,255,.7)}
-.join .kicker::after{background:rgba(255,255,255,.25)}
-.join h2{font-size:clamp(2rem,6vw,4.4rem);line-height:.95;letter-spacing:-.025em;font-weight:700;text-transform:uppercase;margin-top:18px}
-.join h2 span{color:rgba(255,255,255,.6)}
-.join .lede{color:rgba(255,255,255,.75);margin-top:20px}
-.note{margin-top:20px;color:rgba(255,255,255,.7)}
-.rules__label{color:rgba(255,255,255,.7);padding-bottom:14px}
-.rules{border-top:1px solid rgba(255,255,255,.22)}
-.rules li{display:flex;gap:18px;padding-block:20px;border-bottom:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:.95rem;line-height:1.55}
-.rules b{font:.66rem/1.9 var(--mono);letter-spacing:.16em;color:rgba(255,255,255,.7);font-weight:400}
-.rules strong{color:#fff;font-weight:500}
-
-/* Pie */
-.foot{padding-block:clamp(40px,6vw,64px);border-top:1px solid rgba(255,255,255,.16)}
-.foot__top{display:grid;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.16)}
-.foot .brand img{border-color:#fff}
-.foot .brand__name small{color:rgba(255,255,255,.7)}
-.foot__tag{margin:18px 0 24px;max-width:36ch;color:rgba(255,255,255,.75);font-size:.92rem}
-.foot__cols{display:grid;gap:26px;grid-template-columns:repeat(2,minmax(0,1fr))}
-.foot__cols h3{font:400 .6rem/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px}
-.foot__cols li+li{margin-top:8px}
-.foot__cols a{font-size:.88rem;color:rgba(255,255,255,.8)}
-.foot__cols a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-.foot__bot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;padding-top:24px;color:rgba(255,255,255,.7);font:.6rem/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase}
-
-/* Reveal: solo se oculta si hay JS */
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.js .rv.in{opacity:1;transform:none}
-
-@media (min-width:720px){
-  .pillars{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .pillar{border-bottom:0;border-right:1px solid var(--line);padding-inline:clamp(18px,2.4vw,32px)}
-  .pillar:first-child{padding-left:0}
-  .pillar:last-child{border-right:0;padding-right:0}
-  .foot__top{grid-template-columns:1.2fr 1fr;align-items:start}
-}
-@media (min-width:900px){
-  .hero__in{grid-template-columns:minmax(0,1fr) 340px;align-items:center}
-  .hero h1{font-size:clamp(3rem,7.4vw,6.4rem)}
-  .manifesto{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);align-items:start}
-  .manifesto .plate{position:sticky;top:98px}
-  .join__in{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:start}
-}
-@media (max-width:719px){
-  .nav,.brand__name small{display:none}
-  .head__in{height:58px}
-  .cta .btn{flex:1 1 100%}
-  .plate{max-width:none}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .marquee__track,.dot{animation:none}
-  .js .rv{opacity:1;transform:none;transition:none}
-  .btn:hover{transform:none}
-}
-@media print{.head,.marquee,.grain,.plate{display:none}.dark{background:#fff;color:#000}.dark *{color:#000!important}}
-</style>
-<script>document.documentElement.classList.add('js')</script>
-</head>
-<body>
-<a class="skip" href="#main">Saltar al contenido</a>
-<div class="grain" aria-hidden="true"></div>
-
-<header class="head">
-  <div class="wrap head__in">
-    <a class="brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — inicio">
-      <img src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg" alt="" width="34" height="34" decoding="async">
-      <span class="brand__name">P S Y C H O_M A S I V E<small>, Community</small></span>
-    </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#manifiesto">Manifiesto</a>
-      <a href="#pilares">Pilares</a>
-      <a href="#acceso">Acceso</a>
-    </nav>
-    <a class="btn" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Unirme<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
-  </div>
-</header>
-
-<main id="main" tabindex="-1">
-
-<section class="hero" id="top" aria-labelledby="h1">
-  <div class="wrap hero__in">
-    <div>
-      <p class="hero__eyebrow mono"><span class="dot" aria-hidden="true"></span>Comunidad de Discord · Acceso libre</p>
-      <h1 id="h1"><span>P S Y C H O_</span><span>M A S I V E</span><small>Community</small></h1>
-      <p class="lede lede--hero">Un sitio para gente oscura. Para quienes nunca han encajado en lo convencional y han decidido <strong>mirar su lado oscuro de frente</strong>, con estética y con cabeza, para vivir mejor y no peor.</p>
-      <div class="cta">
-        <a class="btn btn--lg" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Entrar al Discord<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
-        <a class="btn btn--ghost btn--lg" href="#manifiesto">Leer el manifiesto</a>
-      </div>
-      <ul class="hero__meta mono">
-        <li>Abierto a todo el mundo</li><li>Sin formularios</li><li>Sin entrevistas</li><li>Sin lista de espera</li>
-      </ul>
-    </div>
-    <figure class="plate rv">
-      <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
-        <g fill="none" stroke="#fff"><circle cx="200" cy="190" r="150" opacity=".25"/><circle cx="200" cy="190" r="110" opacity=".4"/><circle cx="200" cy="190" r="70" opacity=".6"/><path d="M200 20v340M30 190h340" opacity=".25"/></g>
-        <circle cx="200" cy="190" r="56" fill="#fff"/><circle cx="222" cy="190" r="52" fill="#0a0a0a"/>
-      </svg>
-      <figcaption>Eclipse</figcaption>
-    </figure>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <div class="marquee__seq"><span>Oscuridad</span><i>✦</i><span>Estética</span><i>✦</i><span>Pensamiento</span><i>✦</i><span>Comunidad</span><i>✦</i><span>Sin ruido</span><i>✦</i></div>
-    <div class="marquee__seq"><span>Oscuridad</span><i>✦</i><span>Estética</span><i>✦</i><span>Pensamiento</span><i>✦</i><span>Comunidad</span><i>✦</i><span>Sin ruido</span><i>✦</i></div>
-  </div>
-</div>
-
-<section class="section" id="manifiesto" aria-labelledby="t-mani">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="kicker mono">01 — Manifiesto</p>
-      <h2 id="t-mani">La oscuridad no es una fase. Es parte de ti.</h2>
-    </div>
-    <div class="manifesto">
-      <div class="manifesto__text rv">
-        <p>Si alguna vez te han dicho que eres raro, que piensas demasiado o que te gusta lo que no toca, este es tu sitio. P S Y C H O_M A S I V E, Community es una comunidad para gente oscura: personas que no encajan y no tienen intención de fingir que sí.</p>
-        <p>Aquí lo oscuro no se esconde ni se presume. Se explora desde la estética y desde el pensamiento: imágenes, música, textos, ideas y conversaciones que valen la pena.</p>
-        <p class="pull">Explorar la oscuridad solo tiene sentido si sales de ahí mejor que como entraste.</p>
-        <p>Ese es el objetivo: que mirar hacia dentro, de forma estética y enriquecedora, mejore las condiciones y la calidad de vida de quienes estamos aquí. Sin humo, sin pose y sin gurús. Entra quien quiere entrar.</p>
-      </div>
-      <figure class="plate rv">
-        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
-          <g stroke="#fff" opacity=".3"><path d="M0 80h400M0 160h400M0 240h400M0 320h400M80 0v400M160 0v400M240 0v400M320 0v400"/></g>
-          <path d="M80 320V200a120 120 0 0 1 240 0v120z" fill="#fff"/>
-          <circle cx="200" cy="200" r="64" fill="#0a0a0a"/>
-        </svg>
-        <figcaption>Umbral</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="pilares" aria-labelledby="t-pil">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="kicker mono">02 — Pilares</p>
-      <h2 id="t-pil">Lo que sostiene esto</h2>
-      <p>Tres ideas. Los canales, los temas y los debates salen de ellas.</p>
-    </div>
-    <div class="pillars">
-      <article class="pillar rv">
-        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.3"/><path d="M16 5v22M5 16h22" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="16" r="3.2" fill="currentColor"/></svg>
-        <div class="pillar__top"><span class="mono">01</span><h3>Estética</h3></div>
-        <p>Arte, fotografía, diseño, música. Lo oscuro también puede estar bien hecho, y aquí se cuida. Lo feo vale si tiene intención.</p>
-      </article>
-      <article class="pillar rv">
-        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4v24M16 4l7 7M16 4l-7 7" stroke="currentColor" stroke-width="1.3"/><path d="M6 22h20" stroke="currentColor" stroke-width="1.3"/></svg>
-        <div class="pillar__top"><span class="mono">02</span><h3>Profundidad</h3></div>
-        <p>Conversaciones que pasan del primer mensaje. Filosofía, psicología, cine, literatura. Se discrepa sin romper nada.</p>
-      </article>
-      <article class="pillar rv">
-        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="11" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3"/><circle cx="21" cy="12" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 26c0-4.4 3.6-7 8-7s8 2.6 8 7M16 26c0-4.4 3.6-7 8-7s5 2.6 5 7" stroke="currentColor" stroke-width="1.3"/></svg>
-        <div class="pillar__top"><span class="mono">03</span><h3>Comunidad</h3></div>
-        <p>Gente que se reconoce y se echa una mano. Cuentas lo que llevas entre manos y alguien te responde.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="t-quote">
-  <div class="wrap">
-    <figure class="quote rv">
-      <p class="kicker mono" id="t-quote">03 — Principio</p>
-      <blockquote>«Mira dentro. <span>Ahí hay más de lo que crees.</span>»</blockquote>
-      <figcaption class="mono">P S Y C H O_M A S I V E</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="join dark" id="acceso" aria-labelledby="t-join">
-  <div class="join__grid" aria-hidden="true"></div>
-  <div class="wrap join__in">
-    <div class="rv">
-      <p class="kicker mono">04 — Acceso</p>
-      <h2 id="t-join">Quien quiere entrar,<span> entra.</span></h2>
-      <p class="lede">Sin formulario, sin entrevista, sin lista de espera. Pulsas, entras, te presentas si te apetece y ves si esto es lo tuyo.</p>
-      <div class="cta">
-        <a class="btn btn--inv btn--lg" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Unirme a P S Y C H O_M A S I V E<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
-      </div>
-      <p class="note mono">Invitación permanente · Discord</p>
-    </div>
-    <div class="rv">
-      <p class="rules__label mono" id="normas">Convivencia mínima</p>
-      <ul class="rules" aria-labelledby="normas">
-        <li><b>01</b><span><strong>Respeta a los demás.</strong> Se puede discutir fuerte, pero no faltar.</span></li>
-        <li><b>02</b><span><strong>Aporta o pregunta.</strong> Callar está bien; llenar de ruido, no.</span></li>
-        <li><b>03</b><span><strong>Nada de spam</strong> ni autopromoción fuera de contexto.</span></li>
-        <li><b>04</b><span><strong>Cuida lo que publicas.</strong> La estética es parte del sitio.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="foot dark">
-  <div class="wrap">
-    <div class="foot__top">
-      <div>
-        <a class="brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — volver arriba">
-          <img src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg" alt="" width="34" height="34" loading="lazy" decoding="async">
-          <span class="brand__name">P S Y C H O_M A S I V E<small>, Community</small></span>
-        </a>
-        <p class="foot__tag">Explorar la oscuridad con criterio. Mejorar la vida con hechos.</p>
-        <a class="btn btn--inv" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Entrar al Discord<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr">(se abre en una pestaña nueva)</span></a>
-      </div>
-      <div class="foot__cols">
-        <div>
-          <h3>Secciones</h3>
-          <ul><li><a href="#manifiesto">Manifiesto</a></li><li><a href="#pilares">Pilares</a></li><li><a href="#acceso">Acceso</a></li></ul>
-        </div>
-        <div>
-          <h3>Comunidad</h3>
-          <ul><li><a href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Discord</a></li><li><a href="#normas">Normas</a></li></ul>
-        </div>
-      </div>
-    </div>
-    <div class="foot__bot">
-      <span>© <span id="year">2026</span> P S Y C H O_M A S I V E, Community</span>
-      <span>Hecho para mentes inquietas</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-(function(){
-  /* Año del copyright */
-  var y=document.getElementById('year');
-  if(y){y.textContent=new Date().getFullYear()}
-  /* Reveal al hacer scroll */
-  var items=document.querySelectorAll('.rv');
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!('IntersectionObserver' in window)||reduce){
-    for(var i=0;i<items.length;i++)items[i].classList.add('in');
-    return;
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#e8f0ec;
+    --dim:#8d9a96;
+    --faint:#5b6663;
+    --acid:#b6ff2e;
+    --mag:#ff2ea6;
+    --line:rgba(182,255,46,.16);
+    --panel:rgba(6,9,9,.62);
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --sans:"Space Grotesk",system-ui,sans-serif;
   }
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-  },{rootMargin:'0px 0px -8% 0px',threshold:.12});
-  items.forEach(function(el){io.observe(el)});
-})();
-</script>
-</body>
-</html>
+  html{scroll-behavior:smooth}
+  .page{
+    position:relative;overflow:hidden;
+    background:#040605;color:var(--ink);
+    font-family:var(--sans);font-weight:300;
+    line-height:1.6;
+  }
+  /* ---------- fondo ---------- */
+  .bg{
+    position:absolute;inset:0;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpk68uCtD79ma7KEs6jiDocwPvH5ZiOxb-0vYmaapcHx4LLeiIl9LKdbc&s=10");
+    background-size:cover;background-position:center top;
+    filter:grayscale(.35) contrast(1.12) brightness(.62);
+    transform:scale(1.04);
+  }
+  .bg-veil{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(120% 80% at 50% 0%,rgba(4,6,5,.25),rgba(4,6,5,.86) 58%,#040605 88%),
+      linear-gradient(180deg,rgba(4,6,5,.55),rgba(4,6,5,.2) 30%,#040605 78%);
+  }
+  .grain{
+    position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;pointer-events:none;
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  }
+  .scan{
+    position:absolute;inset:0;pointer-events:none;opacity:.3;
+    background:repeating-linear-gradient(180deg,rgba(255,255,255,.05) 0 1px,transparent 1px 3px);
+  }
+  .shell{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 22px}
+  /* ---------- header ---------- */
+  header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:26px 0 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .psi{
+    width:42px;height:42px;display:grid;place-items:center;flex:0 0 auto;
+    border:1px solid var(--line);border-radius:11px;
+    background:rgba(182,255,46,.05);
+    font-family:Georgia,serif;font-size:23px;color:var(--acid);
+    box-shadow:0 0 26px rgba(182,255,46,.14) inset;
+  }
+  .brand b{font-weight:500;letter-spacing:.34em;font-size:13px;text-transform:uppercase}
+  .brand span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--faint);margin-top:3px}
+  .topnote{
+    font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);text-align:right;line-height:1.9;
+  }
+  .topnote em{color:var(--acid);font-style:normal}
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(70px,13vh,150px) 0 clamp(50px,8vh,90px);max-width:900px}
+  .kicker{
+    font-family:var(--mono);font-size:11px;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--acid);display:flex;align-items:center;gap:14px;margin-bottom:26px;
+  }
+  .kicker::before{content:"";width:52px;height:1px;background:var(--acid);opacity:.6}
+  h1{
+    font-size:clamp(46px,10.5vw,118px);line-height:.92;font-weight:700;
+    letter-spacing:-.045em;text-transform:uppercase;
+  }
+  .glitch{position:relative;display:inline-block;color:var(--ink)}
+  .glitch::before,.glitch::after{
+    content:attr(data-text);position:absolute;inset:0;pointer-events:none;
+  }
+  .glitch::before{color:var(--mag);transform:translate(3px,-2px);opacity:.75;mix-blend-mode:screen;animation:g1 6s infinite steps(1)}
+  .glitch::after{color:var(--acid);transform:translate(-3px,2px);opacity:.55;mix-blend-mode:screen;animation:g2 7s infinite steps(1)}
+  @keyframes g1{0%,88%,100%{clip-path:inset(0 0 0 0)}90%{clip-path:inset(12% 0 58% 0)}93%{clip-path:inset(62% 0 8% 0)}96%{clip-path:inset(38% 0 40% 0)}}
+  @keyframes g2{0%,84%,100%{clip-path:inset(0 0 0 0)}87%{clip-path:inset(70% 0 12% 0)}91%{clip-path:inset(24% 0 52% 0)}95%{clip-path:inset(48% 0 30% 0)}}
+  .lede{
+    margin-top:26px;max-width:56ch;font-size:clamp(15px,2vw,19px);
+    color:#c2cec9;font-weight:300;
+  }
+  .lede strong{color:var(--ink);font-weight:500}
+  .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:38px}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:16px 28px;border-radius:2px;text-decoration:none;
+    background:var(--acid);color:#050a03;font-weight:700;
+    font-size:13px;letter-spacing:.2em;text-transform:uppercase;
+    border:1px solid var(--acid);transition:.18s ease;
+    box-shadow:0 0 0 rgba(182,255,46,0);
+  }
+  .btn svg{width:17px;height:17px;fill:#050a03}
+  .btn:hover{background:transparent;color:var(--acid);box-shadow:0 0 34px rgba(182,255,46,.28);transform:translateY(-1px)}
+  .btn:focus-visible{outline:2px solid var(--mag);outline-offset:4px}
+  .hint{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--faint);text-transform:uppercase;line-height:1.8}
+  .meta{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;margin-top:64px;border-top:1px solid var(--line);
+  }
+  .meta div{padding:18px 4px 0;border-right:1px solid var(--line)}
+  .meta div:last-child{border-right:0}
+  .meta b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.24em;color:var(--faint);text-transform:uppercase;font-weight:400}
+  .meta span{font-size:14px;color:#d3ded9}
+  /* ---------- secciones ---------- */
+  section{padding:clamp(60px,9vh,100px) 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);font-size:11px;color:var(--acid);letter-spacing:.3em}
+  h2{font-size:clamp(24px,4.4vw,38px);font-weight:500;letter-spacing:-.02em;line-height:1.1;text-transform:uppercase}
+  .sec-head p{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-left:auto}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{
+    background:var(--panel);border:1px solid rgba(232,240,236,.09);
+    padding:26px 22px 30px;backdrop-filter:blur(6px);
+    transition:.2s ease;
+  }
+  .card:hover{border-color:var(--line);background:rgba(10,15,14,.72)}
+  .card i{
+    font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.24em;
+    color:var(--mag);display:block;margin-bottom:20px;
+  }
+  .card h3{font-size:17px;font-weight:500;margin-bottom:10px;letter-spacing:-.01em}
+  .card p{font-size:13.5px;color:#a6b2ae;line-height:1.75}
+  .rules{list-style:none;counter-reset:r;display:grid;gap:0}
+  .rules li{
+    counter-increment:r;display:grid;grid-template-columns:52px 1fr;gap:18px;
+    padding:20px 0;border-bottom:1px solid rgba(232,240,236,.07);
+  }
+  .rules li::before{
+    content:"0" counter(r);font-family:var(--mono);font-size:11px;color:var(--acid);
+    letter-spacing:.1em;padding-top:4px;
+  }
+  .rules b{display:block;font-weight:500;font-size:14.5px;margin-bottom:4px}
+  .rules span{font-size:13px;color:#9aa6a2;line-height:1.7}
+  .quote{
+    margin-top:44px;padding:26px 24px;border-left:2px solid var(--mag);
+    background:rgba(255,46,166,.04);
+    font-size:clamp(15px,2.2vw,20px);font-style:italic;color:#d6e0dc;
+  }
+  .quote small{display:block;margin-top:12px;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase}
+  /* ---------- footer ---------- */
+  footer{
+    position:relative;z-index:2;margin-top:20px;
+    background:rgba(2,4,3,.86);border-top:1px solid var(--line);
+    padding:clamp(50px,7vh,80px) 0 26px;
+  }
+  .f-top{display:grid;grid-template-columns:1.15fr 2fr;gap:46px;padding-bottom:44px;border-bottom:1px solid rgba(232,240,236,.09)}
+  .f-mark{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.04em;text-transform:uppercase;line-height:1}
+  .f-mark em{font-style:normal;color:var(--acid)}
+  .f-tag{margin-top:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);line-height:2}
+  .f-mail{margin-top:18px;font-family:var(--mono);font-size:11.5px;color:#c2cec9;letter-spacing:.06em}
+  .f-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:34px 26px}
+  .f-cols h4{
+    font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--acid);font-weight:400;margin-bottom:14px;padding-bottom:8px;
+    border-bottom:1px solid rgba(182,255,46,.14);
+  }
+  .f-cols p{font-size:11.5px;line-height:1.85;color:#8b9793}
+  .legal{margin-top:44px;display:grid;gap:26px}
+  .legal article{max-width:88ch}
+  .legal h5{
+    font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:#c8d3cf;font-weight:500;margin-bottom:7px;
+  }
+  .legal p{font-size:11.5px;line-height:1.9;color:#7e8a86;text-align:justify}
+  .legal p b{color:#b3bfba;font-weight:500}
+  /* redes bloqueadas */
+  .social-wrap{margin-top:44px;padding-top:26px;border-top:1px solid rgba(232,240,236,.09)}
+  .social-lab{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--faint);margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  }
+  .social-lab em{
+    font-style:normal;color:var(--mag);border:1px solid rgba(255,46,166,.4);
+    padding:3px 8px;font-size:8.5px;letter-spacing:.2em;
+  }
+  .socials{display:flex;flex-wrap:wrap;gap:10px}
+  .soc{
+    position:relative;width:52px;height:52px;display:grid;place-items:center;
+    border:1px solid rgba(232,240,236,.1);border-radius:2px;
+    background:rgba(255,255,255,.02);
+    cursor:not-allowed;color:#5f6b67;
+    transition:.18s ease;
+  }
+  .soc svg{width:20px;height:20px;fill:currentColor;filter:grayscale(1);opacity:.75}
+  .soc::after{
+    content:"";position:absolute;right:-4px;bottom:-4px;width:14px;height:14px;
+    border-radius:50%;background:#0b100e;border:1px solid rgba(255,46,166,.45);
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff2ea6'%3E%3Cpath d='M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V7a3 3 0 0 1 3-3z'/%3E%3C/svg%3E");
+    background-size:9px;background-position:center;background-repeat:no-repeat;
+  }
+  .soc span{
+    position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);
+    background:#0a0f0d;border:1px solid var(--line);color:#c8d3cf;
+    font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+    padding:5px 8px;white-space:nowrap;opacity:0;pointer-events:none;transition:.16s ease;
+  }
+  .soc:hover span{opacity:1;transform:translateX(-50%) translateY(0)}
+  .soc:hover{border-color:rgba(255,46,166,.3);background:rgba(255,46,166,.04)}
+  .soc:hover svg{opacity:.95}
+  .f-bottom{
+    margin-top:34px;padding-top:20px;border-top:1px solid rgba(232,240,236,.09);
+    display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#5d6965;
+  }
+  .f-bottom b{color:#96a29e;font-weight:400}
+  @media(max-width:760px){
+    .f-top{grid-template-columns:1fr;gap:34px}
+    .topnote{display:none}
+    .meta{grid-template-columns:1fr 1fr}
+    .meta div:nth-child(2){border-right:0}
+    .sec-head p{margin-left:0}
+    .rules li{grid-template-columns:38px 1fr;gap:12px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .glitch::before,.glitch::after{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+
+<div class="page">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scan" aria-hidden="true"></div>
+
+  <div class="shell">
+    <header>
+      <div class="brand">
+        <div class="psi" aria-hidden="true">&#968;</div>
+        <div>
+          <b>Psychomode</b>
+          <span>Comunidad de exploración</span>
+        </div>
+      </div>
+      <div class="topnote">
+        Est. MMXXVI<br>
+        <em>Acceso por invitación</em><br>
+        Nivel: descenso
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <p class="kicker">Bienvenido al descenso</p>
+        <h1><span class="glitch" data-text="Psychomode">Psychomode</span></h1>
+        <p class="lede">
+          Un servidor para quienes no se conforman con la superficie. Aquí se habla de lo
+          <strong>raro, lo liminal, lo que incomoda</strong> y lo que casi nadie se atreve a nombrar:
+          teoría oscura, archivos perdidos, noches eternas y estados mentales al borde del colapso.
+          <strong>No hay luz de guía. Solo profundidad.</strong>
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.45.87-.61 1.26a18.3 18.3 0 0 0-5.48 0 12 12 0 0 0-.62-1.26.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.89 1.52.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.22-2a.08.08 0 0 0-.04-.11 13 13 0 0 1-1.87-.9.08.08 0 0 1-.01-.13c.13-.1.25-.2.37-.3a.08.08 0 0 1 .08-.01c3.93 1.8 8.18 1.8 12.06 0a.08.08 0 0 1 .08.01c.12.1.24.2.37.3a.08.08 0 0 1-.01.13 12 12 0 0 1-1.87.9.08.08 0 0 0-.04.11c.36.7.77 1.37 1.22 2a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6.02-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.68-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42s.95-2.42 2.15-2.42c1.22 0 2.18 1.1 2.16 2.42 0 1.34-.94 2.42-2.16 2.42z"/></svg>
+            Entrar al servidor
+          </a>
+          <p class="hint">Invita a quien aguante<br>el silencio incómodo</p>
+        </div>
+
+        <div class="meta">
+          <div><b>Estado</b><span>Abierto, filtrado</span></div>
+          <div><b>Ambiente</b><span>Nocturno, 24 h</span></div>
+          <div><b>Contenido</b><span>Oscuro y liminal</span></div>
+          <div><b>Idioma</b><span>Español</span></div>
+        </div>
+      </div>
+
+      <section>
+        <div class="sec-head">
+          <span class="sec-num">[01]</span>
+          <h2>Lo que hay abajo</h2>
+          <p>Tres cámaras</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <i>CANAL / ARCHIVO</i>
+            <h3>El archivo muerto</h3>
+            <p>Documentos raros, capturas de otra época, webs que ya no existen y relatos que nadie indexa. Todo se conserva hasta que alguien lo explique.</p>
+          </article>
+          <article class="card">
+            <i>CANAL / RITUAL</i>
+            <h3>Noches en vela</h3>
+            <p>Conversaciones de madrugada sin objetivo claro. Audiovisual extraño, ambient, drone y ruido de fondo para acompañar el insomnio compartido.</p>
+          </article>
+          <article class="card">
+            <i>CANAL / TEORÍA</i>
+            <h3>Sala de psique</h3>
+            <p>Estados alterados, simbolismo, sueños lúcidos, arquetipos y esas ideas que solo tienen sentido a las tres de la mañana. Sin postureo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <span class="sec-num">[02]</span>
+          <h2>Normas del descenso</h2>
+          <p>Breves, firmes</p>
+        </div>
+        <ol class="rules">
+          <li><div><b>Curiosidad antes que razón</b><span>Puedes equivocarte. No puedes ser perezoso. Si entras a discutir, entra a leer.</span></div></li>
+          <li><div><b>Nada de ruido vacío</b><span>Los mensajes de una línea están bien; los de spam, no. Presenta lo que traes al entrar.</span></div></li>
+          <li><div><b>Respeto seco y directo</b><span>Se discute fuerte, se corrige sin drama y no se persigue a nadie por su tono.</span></div></li>
+          <li><div><b>Acredita lo ajeno</b><span>Fuente, autor y fecha. Lo que no se puede rastrear se marca como incierto.</span></div></li>
+          <li><div><b>Silencio también es participar</b><span>Puedes quedarte mirando. Muchos lo hacen. Pero si ves algo bueno, dilo.</span></div></li>
+        </ol>
+        <p class="quote">
+          «La superficie es cómoda. Por eso casi todos se quedan ahí.»
+          <small>Lema interno del servidor</small>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="shell">
+      <div class="f-top">
+        <div>
+          <p class="f-mark">Psycho<em>mode</em></p>
+          <p class="f-tag">Comunidad independiente de exploración<br>de lo oscuro, lo liminal y lo incierto</p>
+          <p class="f-mail">contacto [arroba] psychomode [punto] community</p>
+        </div>
+        <div class="f-cols">
+          <div>
+            <h4>Identificación</h4>
+            <p>Titular: administración de Psychomode.<br>Naturaleza: comunidad privada de Discord.<br>Carácter: sin ánimo de lucro.<br>Ámbito: internacional, idioma español.</p>
+          </div>
+          <div>
+            <h4>Acceso</h4>
+            <p>El acceso se realiza mediante invitación. La administración puede admitir, limitar o revocar la entrada sin motivación previa, atendiendo a criterios de afinidad temática y convivencia.</p>
+          </div>
+          <div>
+            <h4>Objeto</h4>
+            <p>Puesta en común de material, teoría y conversación en torno a lo oscuro, lo liminal, el archivo extraño y los estados mentales. Todo contenido es opinativo y no académico.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal">
+        <article>
+          <h5>1. Aviso legal y condiciones de uso</h5>
+          <p>El presente documento regula el uso del punto de entrada informativo de la comunidad Psychomode y resume, a efectos meramente divulgativos, el marco aplicable a su participación. <b>La navegación por esta página y la permanencia en el servidor atribuyen la condición de usuario</b> e implican la aceptación íntegra de las presentes condiciones, así como de las normas internas publicadas en el propio servidor. Quien no acepte el conjunto podrá abandonar el espacio en cualquier momento, sin necesidad de justificación ni formalidad alguna.</p>
+        </article>
+        <article>
+          <h5>2. Condición de usuario y capacidad</h5>
+          <p>El usuario declara ser mayor de edad conforme a la legislación de su país de residencia o, en su defecto, contar con la autorización de su representante legal. <b>La administración no verifica de forma individual la edad de cada participante</b> y queda exonerada de las consecuencias derivadas de una declaración inexacta. Cada usuario es responsable de la veracidad de los datos que libremente aporte y de la custodia de sus propias credenciales.</p>
+        </article>
+        <article>
+          <h5>3. Moderación, permanencia y expulsión</h5>
+          <p>La moderación es discrecional y se ejerce por criterios de convivencia y coherencia temática. Podrán aplicarse advertencias, silenciamientos, restricciones de canal o <b>expulsión definitiva sin aviso previo</b> en casos de conflicto reiterado, suplantación, publicidad no solicitada, filtraciones o conductas que enturbien el espacio. La permanencia no constituye derecho adquirido y no genera expectativa de continuidad.</p>
+        </article>
+        <article>
+          <h5>4. Contenidos de terceros y propiedad intelectual</h5>
+          <p>Los materiales compartidos pertenecen a sus respectivos autores y se difunden con fines de comentario, crítica, archivo y estudio. <b>La comunidad no reclama titularidad sobre ellos</b> ni garantiza la exactitud de sus licencias. Si un titular considera vulnerados sus derechos, podrá solicitar la retirada o la corrección del crédito mediante el correo de contacto indicado, aportando identificación del material y prueba de titularidad suficiente.</p>
+        </article>
+        <article>
+          <h5>5. Contenido generado por la comunidad</h5>
+          <p>El usuario conserva la autoría de lo que publica y <b>autoriza su exhibición dentro del servidor</b> mientras permanezca alojado, sin contraprestación económica. La administración podrá reorganizar, mover o archivar publicaciones para mantener el orden de los canales, respetando en lo posible la autoría y el contexto original.</p>
+        </article>
+        <article>
+          <h5>6. Privacidad y datos</h5>
+          <p>El acceso se articula a través de la plataforma Discord, cuyo tratamiento de datos se rige por sus propias condiciones, ajenas a esta administración. Dentro del servidor se recogen únicamente los datos que el usuario expone de forma voluntaria: nombre visible, imagen, mensajes y actividad. <b>No se elaboran perfiles comerciales</b> ni se ceden datos a terceros con fines publicitarios. La base del tratamiento es el interés legítimo en la gestión de la comunidad y el consentimiento implícito en la participación.</p>
+        </article>
+        <article>
+          <h5>7. Cookies y tecnologías equivalentes</h5>
+          <p>Este punto de entrada no instala cookies propias de seguimiento ni utiliza analítica de terceros. La plataforma de destino puede emplear cookies técnicas y de sesión conforme a su propia política, sobre la que esta administración carece de control efectivo y respecto de la cual no asume responsabilidad.</p>
+        </article>
+        <article>
+          <h5>8. Enlaces y servicios externos</h5>
+          <p>Los enlaces de salida conducen a servicios ajenos. <b>No se responde de su disponibilidad, contenido, exactitud ni políticas</b>, que pueden variar sin previo aviso. La inclusión de un enlace no implica respaldo ni relación comercial. El acceso a dichos destinos se realiza bajo la exclusiva responsabilidad del usuario.</p>
+        </article>
+        <article>
+          <h5>9. Exclusión de garantías</h5>
+          <p>El servicio se presta «tal cual» y «según disponibilidad». No se garantiza continuidad ininterrumpida, ausencia de errores, conservación indefinida de los mensajes ni recuperación de contenido perdido por causas técnicas, decisiones de plataforma o bajas voluntarias. <b>El archivo de la comunidad es vivo y, por definición, mutable.</b></p>
+        </article>
+        <article>
+          <h5>10. Limitación de responsabilidad</h5>
+          <p>La administración no responde de daños directos o indirectos derivados del uso del espacio, de la confianza depositada en opiniones ajenas ni de las relaciones que los usuarios entablen entre sí dentro o fuera de la plataforma. Las teorías, recomendaciones y materiales compartidos <b>no constituyen asesoramiento profesional</b> de clase alguna, salvo indicación expresa en sentido contrario.</p>
+        </article>
+        <article>
+          <h5>11. Indemnidad</h5>
+          <p>El usuario mantendrá indemne a la administración frente a reclamaciones de terceros que traigan causa de sus propias publicaciones, del uso indebido de materiales protegidos o del quebranto de las presentes condiciones, incluidos los gastos razonables de defensa cuando procedan.</p>
+        </article>
+        <article>
+          <h5>12. Notificaciones y contacto</h5>
+          <p>Las comunicaciones relativas a moderación, derechos de autor, privacidad o incidencias técnicas se dirigirán al correo indicado en el encabezado de este pie, con asunto identificativo y descripción suficiente. <b>Se responderá en un plazo orientativo de quince días hábiles</b>, sin que dicho plazo constituya garantía contractual.</p>
+        </article>
+        <article>
+          <h5>13. Modificaciones y vigencia</h5>
+          <p>Este documento puede actualizarse para reflejar cambios normativos, técnicos u organizativos. La versión vigente será siempre la publicada en este punto de entrada, sin necesidad de notificación individual. <b>El uso continuado tras una modificación equivale a su aceptación.</b> La eventual nulidad de una cláusula no afectará a la validez del resto, que subsistirá en lo posible.</p>
+        </article>
+        <article>
+          <h5>14. Legislación aplicable y resolución de conflictos</h5>
+          <p>Las presentes condiciones se interpretan conforme a los principios generales del derecho aplicables en el domicilio del titular. Cualquier controversia se someterá preferentemente a negociación de buena fe y, en su defecto, a los tribunales competentes de dicho domicilio. <b>Se excluye la sumisión a arbitraje</b> salvo pacto expreso posterior entre las partes.</p>
+        </article>
+        <article>
+          <h5>15. Idioma y cláusula de salvaguarda</h5>
+          <p>La versión de referencia de este texto es la redactada en español. Cualquier traducción tendrá carácter meramente informativo. Si alguna estipulación resultase inaplicable, se interpretará en el sentido más próximo a su finalidad original, sin arrastrar consigo al conjunto del articulado.</p>
+        </article>
+      </div>
+
+      <div class="social-wrap">
+        <p class="social-lab">
+          Presencia en redes
+          <em>Bloqueadas · pendientes de apertura</em>
+        </p>
+        <div class="socials">
+          <div class="soc" role="img" aria-label="X, bloqueado" tabindex="0">
+            <span>X — bloqueado</span>
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          <div class="soc" role="img" aria-label="Instagram, bloqueado" tabindex="0">
+            <span>Instagram — bloqueado</span>
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.96.24 2.42.4.6.24 1.04.52 1.5.98.46.46.74.9.98 1.5.16.46.35 1.25.4 2.42.07 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.24 1.96-.4 2.42-.24.6-.52 1.04-.98 1.5-.46.46-.9.74-1.5.98-.46.16-1.25.35-2.42.4-1.25.07-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.96-.24-2.42-.4-.6-.24-1.04-.52-1.5-.98-.46-.46-.74-.9-.98-1.5-.16-.46-.35-1.25-.4-2.42C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.24-1.96.4-2.42.24-.6.52-1.04.98-1.5.46-.46.9-.74 1.5-.98.46-.16 1.25-.35 2.42-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.13a4.38 4.38 0 1 1 0-8.76 4.38 4.38 0 0 1 0 8.76zm6.9-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </div>
+          <div class="soc" role="img" aria-label="TikTok, bloqueado" tabindex="0">
+            <span>TikTok — bloqueado</span>
+            <svg viewBox="0 0 24 24"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-1.85-2.48V9.75a5.87 5.87 0 1 0 4.1 5.6V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.28 4.28 0 0 1-2.4-1.48z"/></svg>
+          </div>
+          <div class="soc" role="img" aria-label="YouTube, bloqueado" tabindex="0">
+            <span>YouTube — bloqueado</span>
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6z"/></svg>
+          </div>
+          <div class="soc" role="img" aria-label="Discord, bloqueado" tabindex="0">
+            <span>Discord — bloqueado</span>
+            <svg viewBox="0 0 24 24"><path d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.45.87-.61 1.26a18.3 18.3 0 0 0-5.48 0 12 12 0 0 0-.62-1.26.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.89 1.52.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.22-2a.08.08 0 0 0-.04-.11 13 13 0 0 1-1.87-.9.08.08 0 0 1-.01-.13c.13-.1.25-.2.37-.3a.08.08 0 0 1 .08-.01c3.93 1.8 8.18 1.8 12.06 0a.08.08 0 0 1 .08.01c.12.1.24.2.37.3a.08.08 0 0 1-.01.13 12 12 0 0 1-1.87.9.08.08 0 0 0-.04.11c.36.7.77 1.37 1.22 2a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6.02-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.68-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42s.95-2.42 2.15-2.42c1.22 0 2.18 1.1 2.16 2.42 0 1.34-.94 2.42-2.16 2.42z"/></svg>
+          </div>
+          <div class="soc" role="img" aria-label="Twitch, bloqueado" tabindex="0">
+            <span>Twitch — bloqueado</span>
+            <svg viewBox="0 0 24 24"><path d="M4.3 2 2.5 6.2v15.1h4.9V24h3.4l2.7-2.7h4.2l5.1-5.1V2H4.3zm15.6 13.4-3 3h-4.9l-2.7 2.7v-2.7H5.4V4h14.5v11.4zM17 7.4h-1.8v5.3H17V7.4zm-4.8 0h-1.8v5.3h1.8V7.4z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        <p><b>Psychomode</b> · Comunidad de exploración · MMXXVI</p>
+        <p>Documento informativo · No constituye asesoramiento jurídico</p>
+        <p>Versión 1.0 · Revisión 25.11.2026</p>
+      </div>
+    </div>
+  </footer>
+</div>
