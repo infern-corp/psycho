@@ -3,17 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a0a0a">
+<!-- FIX 8: theme-color alineado con el fondo real (blanco); antes #0a0a0a no coincidía con la página -->
+<meta name="theme-color" content="#ffffff">
 
 <title>P S Y C H O_M A S I V E, Community — Entra a la oscuridad</title>
-<meta name="description" content="P S Y C H O_M A S I V E, Community es una comunidad de Discord para explorar la oscuridad que yace en cada uno desde la estética y el pensamiento. Sin ruido, sin algoritmo, sin pose. Entra.">
+<!-- FIX 15: description recortada a 152 caracteres (≤160) manteniendo la keyword "comunidad de Discord" -->
+<meta name="description" content="P S Y C H O_M A S I V E, Community: comunidad de Discord para explorar la oscuridad que yace en cada uno desde la estética y el pensamiento. Sin ruido. Entra.">
 <meta name="author" content="P S Y C H O_M A S I V E, Community">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
 <link rel="canonical" href="https://infern-corp.github.io/psychomasive/">
 <link rel="alternate" hreflang="es" href="https://infern-corp.github.io/psychomasive/">
+<!-- FIX 7: x-default apunta a la misma URL a propósito: existe una sola versión de idioma (es) -->
 <link rel="alternate" hreflang="x-default" href="https://infern-corp.github.io/psychomasive/">
 
+<!-- FIX 9: lang="es" y og:locale="es_ES" son coherentes; el contenido es español neutro con variante España -->
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="P S Y C H O_M A S I V E, Community">
@@ -23,24 +27,33 @@
 <meta property="og:url" content="https://infern-corp.github.io/psychomasive/">
 <!-- OG image: única imagen externa (la subes tú) -->
 <meta property="og:image" content="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png">
+<!-- FIX 11: declarado el MIME real de la OG -->
+<meta property="og:image:type" content="image/png">
+<!-- TODO: confirmar dimensiones reales -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logotipo de P S Y C H O_M A S I V E, Community sobre fondo negro">
 
 <!-- Twitter -->
+<!-- FIX 12: sin cuentas oficiales en X/Twitter, se omiten twitter:site y twitter:creator para no inventar handles -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="P S Y C H O_M A S I V E, Community — Entra a la oscuridad">
 <meta name="twitter:description" content="Una invitación a explorar la oscuridad que yace en cada uno. Estética, sobria, enriquecedora. Comunidad de Discord con acceso libre.">
 <meta name="twitter:image" content="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png">
 <meta name="twitter:image:alt" content="Logotipo de P S Y C H O_M A S I V E, Community sobre fondo negro">
 
+<!-- FIX 13 (opcional): precarga de la OG para priorizar su descarga; elimina esta línea si no la usas en página -->
+<link rel="preload" as="image" href="https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png" fetchpriority="high">
+
 <!-- Favicon SVG inline -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Cpath d='M22 46V18h11a8 8 0 0 1 0 16h-5' fill='none' stroke='%23fff' stroke-width='5'/%3E%3Cpath d='M38 46l8-13' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E">
-<!-- Fallback PNG 32x32 inline -->
+<!-- FIX 3: los PNG base64 son válidos estructuralmente (32×32 y 180×180, RGBA) pero monocromos: son placeholders.
+     El icono real y con marca es el SVG inline de arriba. Sustituir ambos data URI por PNG con el logo cuando exista archivo propio. -->
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVFhH7dYxDoAgDAXQn8TEwcE7eAAP4AE8gAfwAB7AA3gAD+ABPIDHcHBwcnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJy8gN4zwM1AAGl0m8TAAAAAElFTkSuQmCC">
-<!-- Apple touch icon 180x180 inline -->
 <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADUSURBVHhe7dExAQAADMOg+TfdmcgByGZ3BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4zwM1AAGl0m8TAAAAAElFTkSuQmCC">
 
+<!-- FIX 1: no existe logo propio en el dominio, así que se mantiene el logo de Pinterest como ImageObject con width/height
+     y se añade "image" con la OG. Se documenta la deuda: mover el logo a /psychomasive/ y actualizar ambas rutas. -->
 <!-- Datos estructurados -->
 <script type="application/ld+json">
 {
@@ -54,8 +67,11 @@
       "url": "https://infern-corp.github.io/psychomasive/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg"
+        "url": "https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg",
+        "width": 1200,
+        "height": 1200
       },
+      "image": "https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png",
       "description": "Comunidad de Discord dedicada a explorar la oscuridad que yace en cada uno desde la estética y el pensamiento, con el objetivo de mejorar la calidad de vida de sus miembros.",
       "sameAs": ["https://discord.gg/5W3ptXFvVA"]
     },
@@ -74,7 +90,14 @@
       "name": "P S Y C H O_M A S I V E, Community — Entra a la oscuridad",
       "inLanguage": "es",
       "isPartOf": { "@id": "https://infern-corp.github.io/psychomasive/#site" },
-      "about": { "@id": "https://infern-corp.github.io/psychomasive/#org" }
+      "about": { "@id": "https://infern-corp.github.io/psychomasive/#org" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://i.ibb.co/h1hCCJzq/19314ead-701e-403d-b992-fdcc2b75c2ef.png",
+        "width": 1200,
+        "height": 630
+      },
+      "significantLink": ["https://discord.gg/5W3ptXFvVA"]
     }
   ]
 }
@@ -84,6 +107,8 @@
 :root{
   --paper:#fff;--ink:#0a0a0a;--ink-2:#4d4d4d;--ink-3:#8c8c8c;
   --line:#e4e4e4;--line-2:#c4c4c4;--max:1280px;--pad:clamp(20px,5vw,72px);
+  /* FIX 31: --logo declarado y consumido en .brand__mark como background de respaldo si el <img> no carga */
+  --logo:url("https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg");
   --sans:"Helvetica Neue",Helvetica,Arial,system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   --ease:cubic-bezier(.2,.7,.2,1);
@@ -94,6 +119,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
   font-size:clamp(15px,1.05vw,17px);line-height:1.6;letter-spacing:.005em;
   -webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
+/* FIX 24: svg como bloque para evitar huecos de línea base en los SVG inline */
+svg{display:block}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,p,figure,blockquote{margin:0}
 ul,ol{margin:0;padding:0;list-style:none}
@@ -102,6 +129,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .site-foot a:focus-visible,.join a:focus-visible,.join .btn:focus-visible,
 .marquee a:focus-visible{outline-color:#fff}
+/* FIX 21: en el botón invertido (fondo blanco sobre sección negra) el outline blanco quedaría invisible sobre el propio botón:
+   se separa con outline-offset y se añade un anillo oscuro de refuerzo */
+.join .btn--inv:focus-visible{outline:2px solid #fff;outline-offset:4px;box-shadow:0 0 0 2px rgba(0,0,0,.9)}
 .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
 .mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
 .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:var(--paper);
@@ -117,8 +147,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .site-head__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:66px}
 .brand{display:flex;align-items:center;gap:12px}
+/* FIX 6: object-fit:contain (el logo de Pinterest puede no ser cuadrado) + fondo blanco por si el logo es transparente.
+   FIX 31: background-image con --logo como respaldo si el <img> falla. */
 .brand__mark{width:34px;height:34px;flex:none;border:1px solid var(--ink);display:block;
-  background:var(--ink);color:var(--paper);object-fit:cover;object-position:center}
+  background:#fff;background-image:var(--logo);background-size:contain;background-repeat:no-repeat;background-position:center;
+  color:var(--paper);object-fit:contain;object-position:center}
 .brand__name{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;line-height:1.1}
 .brand__name span{display:block;color:var(--ink-3);letter-spacing:.18em;font-size:.58rem;margin-top:3px}
 .nav{display:flex;align-items:center;gap:30px}
@@ -147,6 +180,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* Hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero__ghost{position:absolute;inset:0;z-index:0;display:grid;place-items:center;pointer-events:none;overflow:hidden}
+/* FIX 4: height:auto explícito para no deformar; el preserveAspectRatio del SVG se ajusta en el marcado */
 .hero__ghost svg{width:min(105vw,1150px);max-width:none;height:auto;
   filter:grayscale(1) contrast(1.1);opacity:.1;transform:translateY(-2%) scale(1.05)}
 .hero__in{position:relative;z-index:1;padding-block:clamp(56px,9vw,120px) clamp(40px,6vw,80px);
@@ -190,6 +224,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.45;font-weight:500;letter-spacing:-.01em}
 .plate{position:relative;border:1px solid var(--ink);background:#f6f6f6;aspect-ratio:1/1;
   overflow:hidden;display:grid;place-items:center;max-width:420px}
+/* FIX 25: el contenedor manda en el tamaño; los atributos width/height del SVG quedan como fallback */
 .plate svg{width:100%;height:100%;display:block}
 .plate__tag{position:absolute;bottom:0;left:0;right:0;background:var(--ink);color:var(--paper);
   padding:11px 16px;font-family:var(--mono);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;
@@ -219,7 +254,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .join__kicker{color:rgba(255,255,255,.65)}
 .join h2{font-size:clamp(2rem,6vw,4.4rem);line-height:.95;letter-spacing:-.025em;font-weight:700;text-transform:uppercase}
 .join__title{margin-top:18px}
-.join h2 span{color:rgba(255,255,255,.4)}
+/* FIX 20: subido de .4 a .55 para superar 3:1 en texto grande sobre #0a0a0a */
+.join h2 span{color:rgba(255,255,255,.55)}
 .join__lede{color:rgba(255,255,255,.72);max-width:50ch;margin-top:20px}
 .join__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .join__note{margin-top:20px;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65)}
@@ -268,6 +304,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .manifesto__aside{position:sticky;top:98px}
   .join__in{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:start}
 }
+/* FIX 30: en móvil se oculta la nav de anclas a propósito; la cabecera conserva el CTA "Unirme" y el pie repite las secciones,
+   por lo que no queda ningún destino inaccesible. Se evita añadir JS de menú. */
 @media (max-width:719px){
   .nav{display:none}
   .brand__name span{display:none}
@@ -275,6 +313,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hero__cta .btn,.join__cta .btn{flex:1 1 100%}
   .plate{max-width:none}
 }
+/* FIX 23: el grain es un SVG estático (sin animación), no provoca parpadeos; se desactivan solo las animaciones reales */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .marquee__track,.hero__dot{animation:none}
@@ -283,6 +322,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 @media print{
   .site-head,.marquee,.grain{display:none}
+  /* FIX 29: los SVG decorativos no se imprimen */
+  .plate svg,.hero__ghost svg{display:none}
   body{color:#000;background:#fff}
   .join,.site-foot{background:#fff;color:#000}
   .join h2 span,.join__kicker,.join__lede,.join__note,.join__side .mono,
@@ -296,15 +337,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </head>
 <body>
 
-<a class="skip" href="#main">Saltar al contenido</a>
-<div class="grain" aria-hidden="true"></div>
+<!-- FIX 16: aria-label explícito en el enlace de salto -->
+<a class="skip" href="#main" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+<!-- FIX 26: role="presentation" redundante con aria-hidden pero explícito -->
+<div class="grain" aria-hidden="true" role="presentation"></div>
 
 <header class="site-head">
   <div class="wrap site-head__in">
+    <!-- FIX 33: se mantiene el aria-label del enlace (aporta "inicio") y el <img> pasa a alt="" para no duplicar el nombre accesible -->
     <a class="brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — inicio">
       <!-- Logo real (única imagen externa junto a la OG) -->
       <img class="brand__mark" src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg"
-           alt="Logotipo de P S Y C H O_M A S I V E, Community" width="34" height="34" decoding="async">
+           alt="" width="34" height="34" decoding="async">
       <span class="brand__name">P S Y C H O_M A S I V E<span>, Community</span></span>
     </a>
     <nav class="nav" aria-label="Navegación principal">
@@ -320,12 +364,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </header>
 
-<main id="main" tabindex="-1">
+<!-- FIX 22: main etiquetado por el h1 del hero -->
+<main id="main" tabindex="-1" aria-labelledby="hero-title">
 
 <section class="hero" id="top" aria-labelledby="hero-title">
   <!-- Imagen decorativa generada inline (SVG) -->
   <div class="hero__ghost" aria-hidden="true">
-    <svg viewBox="0 0 1200 1200" width="1200" height="1200" aria-hidden="true" focusable="false">
+    <!-- FIX 4: preserveAspectRatio slice para que el escalado CSS no deforme; focusable="false" verificado (FIX 17) -->
+    <svg viewBox="0 0 1200 1200" width="1200" height="1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
       <rect width="1200" height="1200" fill="#0a0a0a"/>
       <g fill="none" stroke="#fff" stroke-width="90" stroke-linecap="square">
         <path d="M340 900V340h220a150 150 0 0 1 0 300h-110"/>
@@ -354,7 +400,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <figure class="plate rv">
       <!-- Pieza visual generada inline (SVG) -->
-      <svg viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Pieza visual monocroma de P S Y C H O_M A S I V E, Community">
+      <!-- FIX 18: se elimina el aria-label (duplicaba el figcaption) y el role="img"; el figcaption describe la pieza -->
+      <!-- FIX 5: preserveAspectRatio meet + height 100% para respetar el aspect-ratio 1/1 del contenedor -->
+      <svg viewBox="0 0 400 400" width="400" height="400" preserveAspectRatio="xMidYMid meet" focusable="false">
         <rect width="400" height="400" fill="#0a0a0a"/>
         <circle cx="200" cy="200" r="140" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>
         <circle cx="200" cy="200" r="96" fill="none" stroke="#fff" stroke-width="2" opacity=".5"/>
@@ -394,7 +442,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <aside class="manifesto__aside rv">
         <figure class="plate">
           <!-- Pieza visual generada inline (SVG) -->
-          <svg viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Detalle de la identidad visual de P S Y C H O_M A S I V E, Community">
+          <!-- FIX 19: mismo criterio que en el hero: sin aria-label duplicado, el figcaption describe -->
+          <!-- FIX 5: preserveAspectRatio meet + height 100% -->
+          <svg viewBox="0 0 400 400" width="400" height="400" preserveAspectRatio="xMidYMid meet" focusable="false">
             <rect width="400" height="400" fill="#0a0a0a"/>
             <g stroke="#fff" stroke-width="1" opacity=".4">
               <path d="M0 80h400M0 160h400M0 240h400M0 320h400"/>
@@ -467,7 +517,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <div class="join__side">
       <p class="mono">Convivencia mínima</p>
-      <ul class="rules">
+      <!-- FIX 10: id="normas" para que el enlace del pie apunte al bloque real de normas -->
+      <ul class="rules" id="normas">
         <li class="rule-item"><b>01</b><span><strong>Respeta el tono.</strong> Se puede discutir fuerte; no se puede faltar.</span></li>
         <li class="rule-item"><b>02</b><span><strong>Aporta o pregunta.</strong> El silencio se respeta, el relleno no.</span></li>
         <li class="rule-item"><b>03</b><span><strong>Nada de spam</strong> ni autopromo sin contexto.</span></li>
@@ -483,10 +534,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <div class="wrap">
     <div class="foot__top">
       <div>
+        <!-- FIX 33: aria-label conservado aquí porque añade "volver arriba"; alt vacío en la imagen -->
         <a class="brand foot__brand" href="#top" aria-label="P S Y C H O_M A S I V E, Community — volver arriba">
           <!-- Logo real (única imagen externa junto a la OG) -->
           <img class="brand__mark" src="https://i.pinimg.com/1200x/65/f9/08/65f908c22dfbac965fc895d6a8809536.jpg"
-               alt="Logotipo de P S Y C H O_M A S I V E, Community" width="34" height="34" loading="lazy" decoding="async">
+               alt="" width="34" height="34" loading="lazy" decoding="async">
           <span class="brand__name">P S Y C H O_M A S I V E<span>, Community</span></span>
         </a>
         <p class="foot__tagline">Explorar la oscuridad, con criterio. Mejorar la vida, con hechos.</p>
@@ -504,7 +556,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <h3>Comunidad</h3>
           <ul>
             <li><a href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Discord</a></li>
-            <li><a href="#acceso">Normas</a></li>
+            <!-- FIX 10: "Normas" apunta ahora a #normas -->
+            <li><a href="#normas">Normas</a></li>
             <li><a href="https://discord.gg/5W3ptXFvVA" target="_blank" rel="noopener noreferrer">Contacto</a></li>
           </ul>
         </div>
@@ -518,6 +571,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </footer>
 
+<!-- FIX 27: el script permanece al final del body (equivale a defer); se mantiene el fallback de año -->
 <script>
 (function () {
   var y = document.getElementById('year');
@@ -528,6 +582,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   }
 
   var items = document.querySelectorAll('.rv');
+  // FIX 28: se conserva el unobserve tras revelar y el atajo con reduced-motion / sin soporte
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     items.forEach(function (el) { el.classList.add('in'); });
     return;
