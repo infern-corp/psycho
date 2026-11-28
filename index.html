@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <title>Synthesis Logic — Comunidad académica de lógica | Academic Logic Community</title>
-  <meta name="description" content="Synthesis Logic es una comunidad académica bilingüe (ES/EN) dedicada a la lógica en su totalidad. Discusión rigurosa, estándares argumentativos y corrección mutua. Fundada por Daniel Gascón. Únete: avicola56@gmail.com." />
-  <meta name="keywords" content="Synthesis Logic, lógica, logic, comunidad académica de lógica, academic logic community, lógica formal, formal logic, filosofía de la lógica, philosophy of logic, rigor argumentativo, argumentative rigor, Daniel Gascón" />
+  <meta name="description" content="Synthesis Logic es una comunidad académica bilingüe (ES/EN) dedicada a la lógica en su totalidad. Normas de discusión, criterios de admisión y corrección mutua. Fundada por Daniel Gascón." />
+  <meta name="keywords" content="Synthesis Logic, lógica, logic, comunidad académica de lógica, academic logic community, normas de discusión, discussion norms, criterios de admisión, admission criteria, rigor argumentativo, Daniel Gascón" />
   <meta name="author" content="Daniel Gascón" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0a0a0a" />
@@ -20,7 +20,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Synthesis Logic" />
   <meta property="og:title" content="Synthesis Logic — Comunidad académica de lógica" />
-  <meta property="og:description" content="Comunidad académica bilingüe (ES/EN) dedicada a la lógica en su totalidad. Discusión rigurosa y corrección mutua." />
+  <meta property="og:description" content="Comunidad académica bilingüe (ES/EN) dedicada a la lógica en su totalidad. Normas de discusión, criterios de admisión y corrección mutua." />
   <meta property="og:url" content="https://infern-corp.github.io/synthesislogic/" />
   <meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYzMCIgdmlld0JveD0iMCAwIDEyMDAgNjMwIj48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSI2MDAiIHk9IjI2MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iNjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZmZmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+U1lOVEhFU0lTIExPR0lDPC90ZXh0Pjx0ZXh0IHg9IjYwMCIgeT0iMzQwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzMiIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkNvbXVuaWRhZCBhY2Fkw6ltaWNhIGRlIGzDs2dpY2EgLyBBY2FkZW1pYyBsb2dpYyBjb21tdW5pdHk8L3RleHQ+PC9zdmc+" />
   <meta property="og:image:width" content="1200" />
@@ -54,7 +54,7 @@
         "name": "Synthesis Logic",
         "alternateName": ["Comunidad académica de lógica", "Academic logic community"],
         "url": "https://infern-corp.github.io/synthesislogic/",
-        "description": "Bilingual academic community (ES/EN) dedicated to logic in its entirety, with rigorous discussion and mutual correction.",
+        "description": "Bilingual academic community (ES/EN) dedicated to logic in its entirety, with explicit discussion norms and admission criteria.",
         "founder": { "@type": "Person", "name": "Daniel Gascón" },
         "email": "avicola56@gmail.com",
         "foundingDate": "2026",
@@ -112,6 +112,25 @@
       border-radius: 4px; padding: 28px; text-align: center;
       font-size: 1.15rem; font-style: italic; color: #e0e0e0;
     }
+    .normas { list-style: none; }
+    .normas li {
+      background: rgba(255,255,255,0.04); border-left: 3px solid #c9a227;
+      padding: 16px 20px; margin-bottom: 12px; border-radius: 2px;
+      font-size: 1rem;
+    }
+    .normas li strong { color: #ffffff; }
+    .pasos { counter-reset: paso; list-style: none; }
+    .pasos li {
+      counter-increment: paso; position: relative; padding-left: 52px;
+      margin-bottom: 18px; font-size: 1rem;
+    }
+    .pasos li::before {
+      content: counter(paso); position: absolute; left: 0; top: 0;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: #c9a227; color: #0a0a0a; font-weight: bold;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
     .contacto { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); }
     .contacto h2 { font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 16px; color: #ffffff; text-transform: none; }
     .contacto p { font-size: 1.1rem; margin-bottom: 10px; }
@@ -136,26 +155,54 @@
       <h1><span data-i18n="title.main">Synthesis Logic</span><span data-i18n="title.sub">Comunidad académica de lógica</span></h1>
       <p class="tagline" data-i18n="tagline">«Pensar con rigor, corregir sin miedo.»</p>
     </header>
+
     <section>
       <h2 data-i18n="about.title">Qué es Synthesis Logic</h2>
       <p data-i18n="about.p1">Synthesis Logic es una comunidad académica bilingüe (español/inglés) dedicada a la lógica en su totalidad. No es un club de fans ni un espacio de divulgación superficial: es un lugar para argumentar, corregir y ser corregido con estándares académicos.</p>
       <p data-i18n="about.p2">No pedimos títulos ni erudición. Pedimos disposición a exponer una idea con claridad, a recibir objeciones y a cambiarla si las objeciones son mejores que la idea.</p>
     </section>
+
     <section>
       <h2 data-i18n="topics.title">Qué se discute</h2>
       <div class="total" data-i18n="topics.total">Toda la lógica. Sin excepciones, sin listas cerradas.</div>
     </section>
+
+    <section>
+      <h2 data-i18n="norms.title">Normas de la comunidad</h2>
+      <ul class="normas">
+        <li data-i18n="norms.n1"><strong>Caridad interpretativa:</strong> se responde a la versión más fuerte del argumento ajeno, no a la más débil.</li>
+        <li data-i18n="norms.n2"><strong>Crítica al argumento, no a la persona:</strong> ninguna falacia ad hominem es aceptable, venga de donde venga.</li>
+        <li data-i18n="norms.n3"><strong>Obligación de responder:</strong> quien recibe una objeción sustantiva debe responderla o retirar su afirmación.</li>
+        <li data-i18n="norms.n4"><strong>Atribución:</strong> toda idea ajena se cita. El plagio es motivo de expulsión.</li>
+        <li data-i18n="norms.n5"><strong>Corrección pública:</strong> quien se equivoca lo reconoce y enmienda, no borra.</li>
+        <li data-i18n="norms.n6"><strong>Distinción entre opinión y argumento:</strong> las opiniones son bienvenidas, pero no se confunden con pruebas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="join.title">Cómo unirse</h2>
+      <ol class="pasos">
+        <li data-i18n="join.s1">Escribe a <strong>avicola56@gmail.com</strong> con el asunto «Admisión».</li>
+        <li data-i18n="join.s2">Incluye una breve presentación: quién eres y qué te interesa de la lógica.</li>
+        <li data-i18n="join.s3">Adjunta una muestra de razonamiento propio: un argumento, una objeción, una duda bien formulada. No hace falta que sea original; hace falta que sea tuyo.</li>
+        <li data-i18n="join.s4">El equipo de admisión responderá con observaciones o con la aceptación.</li>
+        <li data-i18n="join.s5">Una vez dentro, se espera participación y sujeción a las normas.</li>
+      </ol>
+    </section>
+
     <section class="contacto">
       <h2 data-i18n="contact.title">¿Quieres unirte?</h2>
       <p data-i18n="contact.text">Escribe al correo de admisión:</p>
       <p><a href="mailto:avicola56@gmail.com">avicola56@gmail.com</a></p>
       <p style="margin-top:18px; font-size:0.95rem; color:#bdbdbd;" data-i18n="contact.founder">Director y fundador: <strong>Daniel Gascón</strong></p>
     </section>
+
     <footer>
       <p data-i18n="footer.line1"><strong>Synthesis Logic</strong> — Comunidad académica bilingüe de lógica.</p>
       <p data-i18n="footer.line2">© 2026 · Fundada por Daniel Gascón</p>
     </footer>
   </div>
+
   <script>
     const translations = {
       es: {
@@ -167,6 +214,19 @@
         "about.p2": "No pedimos títulos ni erudición. Pedimos disposición a exponer una idea con claridad, a recibir objeciones y a cambiarla si las objeciones son mejores que la idea.",
         "topics.title": "Qué se discute",
         "topics.total": "Toda la lógica. Sin excepciones, sin listas cerradas.",
+        "norms.title": "Normas de la comunidad",
+        "norms.n1": "<strong>Caridad interpretativa:</strong> se responde a la versión más fuerte del argumento ajeno, no a la más débil.",
+        "norms.n2": "<strong>Crítica al argumento, no a la persona:</strong> ninguna falacia ad hominem es aceptable, venga de donde venga.",
+        "norms.n3": "<strong>Obligación de responder:</strong> quien recibe una objeción sustantiva debe responderla o retirar su afirmación.",
+        "norms.n4": "<strong>Atribución:</strong> toda idea ajena se cita. El plagio es motivo de expulsión.",
+        "norms.n5": "<strong>Corrección pública:</strong> quien se equivoca lo reconoce y enmienda, no borra.",
+        "norms.n6": "<strong>Distinción entre opinión y argumento:</strong> las opiniones son bienvenidas, pero no se confunden con pruebas.",
+        "join.title": "Cómo unirse",
+        "join.s1": "Escribe a <strong>avicola56@gmail.com</strong> con el asunto «Admisión».",
+        "join.s2": "Incluye una breve presentación: quién eres y qué te interesa de la lógica.",
+        "join.s3": "Adjunta una muestra de razonamiento propio: un argumento, una objeción, una duda bien formulada. No hace falta que sea original; hace falta que sea tuyo.",
+        "join.s4": "El equipo de admisión responderá con observaciones o con la aceptación.",
+        "join.s5": "Una vez dentro, se espera participación y sujeción a las normas.",
         "contact.title": "¿Quieres unirte?",
         "contact.text": "Escribe al correo de admisión:",
         "contact.founder": "Director y fundador: <strong>Daniel Gascón</strong>",
@@ -182,6 +242,19 @@
         "about.p2": "We ask for no titles or erudition. We ask for the willingness to state an idea clearly, to receive objections, and to change it if the objections are better than the idea.",
         "topics.title": "What we discuss",
         "topics.total": "All of logic. No exceptions, no closed lists.",
+        "norms.title": "Community norms",
+        "norms.n1": "<strong>Interpretive charity:</strong> respond to the strongest version of the other's argument, not the weakest.",
+        "norms.n2": "<strong>Criticize the argument, not the person:</strong> no ad hominem fallacy is acceptable, from anyone.",
+        "norms.n3": "<strong>Obligation to respond:</strong> whoever receives a substantive objection must answer it or withdraw their claim.",
+        "norms.n4": "<strong>Attribution:</strong> every borrowed idea is cited. Plagiarism is grounds for expulsion.",
+        "norms.n5": "<strong>Public correction:</strong> whoever is wrong acknowledges it and amends, rather than deleting.",
+        "norms.n6": "<strong>Distinction between opinion and argument:</strong> opinions are welcome, but they are not confused with evidence.",
+        "join.title": "How to join",
+        "join.s1": "Write to <strong>avicola56@gmail.com</strong> with the subject «Admission».",
+        "join.s2": "Include a brief introduction: who you are and what interests you about logic.",
+        "join.s3": "Attach a sample of your own reasoning: an argument, an objection, a well-formulated question. It need not be original; it must be yours.",
+        "join.s4": "The admission team will respond with observations or with acceptance.",
+        "join.s5": "Once inside, participation and adherence to the norms are expected.",
         "contact.title": "Interested? Join",
         "contact.text": "Write to the admission email:",
         "contact.founder": "Director and founder: <strong>Daniel Gascón</strong>",
@@ -198,8 +271,8 @@
       document.title = lang === 'es' ? "Synthesis Logic — Comunidad académica de lógica | Academic Logic Community" : "Synthesis Logic — Academic Logic Community | Comunidad académica de lógica";
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute('content', lang === 'es'
-        ? "Synthesis Logic es una comunidad académica bilingüe (ES/EN) dedicada a la lógica en su totalidad. Discusión rigurosa, estándares argumentativos y corrección mutua. Fundada por Daniel Gascón. Únete: avicola56@gmail.com."
-        : "Synthesis Logic is a bilingual (ES/EN) academic community dedicated to logic in its entirety. Rigorous discussion, argumentative standards and mutual correction. Founded by Daniel Gascón. Join: avicola56@gmail.com.");
+        ? "Synthesis Logic es una comunidad académica bilingüe (ES/EN) dedicada a la lógica en su totalidad. Normas de discusión, criterios de admisión y corrección mutua. Fundada por Daniel Gascón."
+        : "Synthesis Logic is a bilingual (ES/EN) academic community dedicated to logic in its entirety. Discussion norms, admission criteria and mutual correction. Founded by Daniel Gascón.");
       document.getElementById('btn-es').classList.toggle('active', lang === 'es');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
