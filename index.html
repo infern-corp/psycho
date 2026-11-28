@@ -2,378 +2,260 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- ================= SEO BÁSICO ================= -->
-  <title>Synthesis Logic — La comunidad de los lógicos | The community of logicians</title>
-  <meta name="description" content="Synthesis Logic es la comunidad de los lógicos: un espacio para pensar con rigor, corregir sin miedo y ejercer la lógica. Bilingual ES/EN. Fundada por Daniel Gascón." />
-  <meta name="keywords" content="Synthesis Logic, lógica, logic, comunidad de lógicos, community of logicians, Kurt Gödel, pensamiento riguroso, Daniel Gascón" />
+  <!-- ============ A. SEO PRIMARIO ============ -->
+  <title>Synthesis Logic — Comunidad de lógica | Logic Community</title>
+  <meta name="title" content="Synthesis Logic — Comunidad de lógica | Logic Community" />
+  <meta name="description" content="Synthesis Logic es una comunidad bilingüe (ES/EN) para discutir lógica formal, filosofía de la lógica, teoría de modelos, computabilidad e incompletitud. Fundada por Daniel Gascón. Únete: avicola56@gmail.com." />
+  <meta name="keywords" content="Synthesis Logic, lógica, logic, comunidad de lógica, logic community, lógica formal, formal logic, filosofía de la lógica, philosophy of logic, teoría de modelos, model theory, computabilidad, computability, incompletitud, incompleteness, pensamiento riguroso, rigorous thinking, Daniel Gascón, lógica matemática, mathematical logic, deducción natural, natural deduction, teoría de conjuntos, set theory, satisfacibilidad, satisfiability, compactitud, compactness, Löwenheim-Skolem, paradojas semánticas, semantic paradoxes" />
   <meta name="author" content="Daniel Gascón" />
-  <meta name="robots" content="index, follow" />
+  <meta name="creator" content="Daniel Gascón" />
+  <meta name="publisher" content="Synthesis Logic" />
+  <meta name="copyright" content="© 2026 Synthesis Logic — Daniel Gascón" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="bingbot" content="index, follow" />
   <meta name="theme-color" content="#0a0a0a" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="rating" content="general" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="https://infern-corp.github.io/synthesislogic/" />
 
-  <!-- ================= HREFLANG ================= -->
+  <!-- ============ B. HREFLANG ============ -->
   <link rel="alternate" hreflang="es" href="https://infern-corp.github.io/synthesislogic/" />
+  <link rel="alternate" hreflang="es-ES" href="https://infern-corp.github.io/synthesislogic/" />
+  <link rel="alternate" hreflang="es-419" href="https://infern-corp.github.io/synthesislogic/" />
   <link rel="alternate" hreflang="en" href="https://infern-corp.github.io/synthesislogic/?lang=en" />
+  <link rel="alternate" hreflang="en-US" href="https://infern-corp.github.io/synthesislogic/?lang=en" />
   <link rel="alternate" hreflang="x-default" href="https://infern-corp.github.io/synthesislogic/" />
 
-  <!-- ================= OPEN GRAPH ================= -->
+  <!-- ============ C. OPEN GRAPH ============ -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Synthesis Logic" />
-  <meta property="og:title" content="Synthesis Logic — La comunidad de los lógicos | The community of logicians" />
-  <meta property="og:description" content="Un espacio para pensar con rigor, corregir sin miedo y ejercer la lógica. Bilingual ES/EN." />
+  <meta property="og:title" content="Synthesis Logic — Comunidad de lógica" />
+  <meta property="og:description" content="Comunidad bilingüe (ES/EN) para discutir lógica formal, filosofía de la lógica, teoría de modelos e incompletitud. Pensamiento riguroso, sin adornos." />
   <meta property="og:url" content="https://infern-corp.github.io/synthesislogic/" />
-  <meta property="og:image" content="https://as1.ftcdn.net/v2/jpg/05/57/06/86/1000_F_557068634_bXoX0KxqJXVsoS2VyNr2Nj0LOE12JaTo.jpg" />
-  <meta property="og:image:alt" content="Fondo de Synthesis Logic" />
+  <meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYzMCIgdmlld0JveD0iMCAwIDEyMDAgNjMwIj48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSI2MDAiIHk9IjI2MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iNjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZmZmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+U1lOVEhFU0lTIExPR0lDPC90ZXh0Pjx0ZXh0IHg9IjYwMCIgeT0iMzQwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzMiIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkNvbXVuaWRhZCBkZSBsw7NnaWNhIC8gTG9naWMgY29tbXVuaXR5PC90ZXh0Pjwvc3ZnPg==" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Synthesis Logic — Comunidad de lógica" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:locale:alternate" content="en_US" />
 
-  <!-- ================= TWITTER CARD ================= -->
+  <!-- ============ D. TWITTER CARD ============ -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Synthesis Logic — La comunidad de los lógicos | The community of logicians" />
-  <meta name="twitter:description" content="Un espacio para pensar con rigor, corregir sin miedo y ejercer la lógica. Bilingual ES/EN." />
-  <meta name="twitter:image" content="https://as1.ftcdn.net/v2/jpg/05/57/06/86/1000_F_557068634_bXoX0KxqJXVsoS2VyNr2Nj0LOE12JaTo.jpg" />
+  <meta name="twitter:title" content="Synthesis Logic — Comunidad de lógica" />
+  <meta name="twitter:description" content="Comunidad bilingüe (ES/EN) para discutir lógica formal, filosofía de la lógica, teoría de modelos e incompletitud." />
+  <meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYzMCIgdmlld0JveD0iMCAwIDEyMDAgNjMwIj48cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSI2MDAiIHk9IjI2MCIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iNjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZmZmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iNCI+U1lOVEhFU0lTIExPR0lDPC90ZXh0Pjx0ZXh0IHg9IjYwMCIgeT0iMzQwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzMiIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPkNvbXVuaWRhZCBkZSBsw7NnaWNhIC8gTG9naWMgY29tbXVuaXR5PC90ZXh0Pjwvc3ZnPg==" />
+  <meta name="twitter:image:alt" content="Synthesis Logic — Comunidad de lógica" />
 
-  <!-- ================= FAVICON EMBEBIDO ================= -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UzwvdGV4dD48dGV4dCB4PSI0OCIgeT0iNTYiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE4IiBmaWxsPSIjZjJmMmYyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7inqI8L3RleHQ+PC9zdmc+" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UzwvdGV4dD48dGV4dCB4PSI0OCIgeT0iNTYiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE4IiBmaWxsPSIjZjJmMmYyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7inqI8L3RleHQ+PC9zdmc+" />
+  <!-- ============ E. ICONOS EMBEBIDOS ============ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UzwvdGV4dD48L3N2Zz4=" />
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UzwvdGV4dD48L3N2Zz4=" />
+  <meta name="msapplication-TileColor" content="#0a0a0a" />
+  <meta name="msapplication-TileImage" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMGEwYTBhIi8+PHRleHQgeD0iMzIiIHk9IjQ0IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNjOWEyMjciIHRleHQtYW5jaG9yPSJtaWRkbGUiPlM8L3RleHQ+PC9zdmc+" />
+  <meta name="application-name" content="Synthesis Logic" />
+  <meta name="apple-mobile-web-app-title" content="Synthesis Logic" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
 
-  <!-- ================= JSON-LD ================= -->
+  <!-- ============ F. MANIFEST EMBEBIDO ============ -->
+  <link rel="manifest" href='data:application/manifest+json,{"name":"Synthesis Logic","short_name":"Synthesis","start_url":"./","display":"standalone","background_color":"%230a0a0a","theme_color":"%23c9a227","lang":"es","description":"Comunidad de lógica / Logic community","icons":[{"src":"data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwYTBhMGEiLz48dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2M5YTIyNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UzwvdGV4dD48L3N2Zz4=","sizes":"64x64","type":"image/svg+xml","purpose":"any"}]}' />
+
+  <!-- ============ G. JSON-LD ============ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Synthesis Logic",
-    "alternateName": ["La comunidad de los lógicos", "The community of logicians"],
-    "url": "https://infern-corp.github.io/synthesislogic/",
-    "description": "Bilingual community (ES/EN) dedicated to the rigorous exercise of logic and critical thinking.",
-    "founder": { "@type": "Person", "name": "Daniel Gascón" },
-    "email": "avicola56@gmail.com",
-    "foundingDate": "2026",
-    "knowsLanguage": ["es", "en"]
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://infern-corp.github.io/synthesislogic/#organization",
+        "name": "Synthesis Logic",
+        "alternateName": ["La comunidad de los lógicos", "The community of logicians"],
+        "url": "https://infern-corp.github.io/synthesislogic/",
+        "description": "Bilingual community (ES/EN) dedicated to the rigorous discussion of formal logic, philosophy of logic and model theory.",
+        "founder": { "@type": "Person", "name": "Daniel Gascón" },
+        "email": "avicola56@gmail.com",
+        "foundingDate": "2026",
+        "knowsLanguage": ["es", "en"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://infern-corp.github.io/synthesislogic/#website",
+        "url": "https://infern-corp.github.io/synthesislogic/",
+        "name": "Synthesis Logic",
+        "description": "Comunidad de lógica / Logic community",
+        "inLanguage": ["es", "en"],
+        "publisher": { "@id": "https://infern-corp.github.io/synthesislogic/#organization" }
+      }
+    ]
   }
   </script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Georgia', 'Times New Roman', serif;
-      color: #f2f2f2;
-      background: #0a0a0a;
-      line-height: 1.7;
-      background-image: url('https://as1.ftcdn.net/v2/jpg/05/57/06/86/1000_F_557068634_bXoX0KxqJXVsoS2VyNr2Nj0LOE12JaTo.jpg');
-      background-size: cover;
-      background-position: center;
+      color: #f2f2f2; line-height: 1.7; background-color: #0a0a0a;
+      background-image:
+        radial-gradient(circle at 18% 22%, rgba(201,162,39,0.10), transparent 42%),
+        radial-gradient(circle at 82% 78%, rgba(201,162,39,0.07), transparent 42%),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.018) 0 2px, transparent 2px 24px);
       background-attachment: fixed;
-      background-repeat: no-repeat;
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.72);
-      z-index: -1;
-    }
-
-    .container { max-width: 900px; margin: 0 auto; padding: 60px 24px 80px; }
-
-    /* ---------- SELECTOR DE IDIOMA ---------- */
+    .container { max-width: 920px; margin: 0 auto; padding: 60px 24px 80px; }
     .lang-switch {
-      position: fixed;
-      top: 18px;
-      right: 18px;
-      z-index: 10;
-      display: flex;
-      gap: 6px;
-      background: rgba(10,10,10,0.75);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 999px;
-      padding: 4px;
-      backdrop-filter: blur(4px);
+      position: fixed; top: 18px; right: 18px; z-index: 10; display: flex; gap: 6px;
+      background: rgba(10,10,10,0.75); border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px; padding: 4px; backdrop-filter: blur(4px);
     }
-
     .lang-switch button {
-      font-family: inherit;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      color: #d8d8d8;
-      background: transparent;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
+      font-family: inherit; font-size: 0.85rem; letter-spacing: 1px; color: #d8d8d8;
+      background: transparent; border: none; padding: 6px 14px; border-radius: 999px;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
     }
-
-    .lang-switch button.active {
-      background: #c9a227;
-      color: #0a0a0a;
-      font-weight: bold;
-    }
-
+    .lang-switch button.active { background: #c9a227; color: #0a0a0a; font-weight: bold; }
     .lang-switch button:hover:not(.active) { color: #ffffff; }
-
-    /* ---------- RESTO ---------- */
-    header { text-align: center; margin-bottom: 70px; }
-
+    header { text-align: center; margin-bottom: 56px; }
     h1 {
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #ffffff;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+      font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: 6px; text-transform: uppercase;
+      font-weight: 700; color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,0.8);
     }
-
-    h1 span {
-      display: block;
-      font-size: 0.35em;
-      letter-spacing: 12px;
-      margin-top: 14px;
-      color: #c9a227;
-      font-weight: 400;
-    }
-
+    h1 span { display: block; font-size: 0.32em; letter-spacing: 10px; margin-top: 14px; color: #c9a227; font-weight: 400; }
     .tagline { margin-top: 22px; font-style: italic; font-size: 1.15rem; color: #d8d8d8; }
-
-    .letter {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 4px;
-      padding: 48px 40px;
-      backdrop-filter: blur(3px);
-      margin-bottom: 60px;
-    }
-
-    .letter h2 {
-      font-size: 1.1rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #c9a227;
-      margin-bottom: 28px;
-      text-align: center;
-      font-weight: 400;
-    }
-
-    .letter p { margin-bottom: 18px; text-align: justify; font-size: 1.05rem; }
-
-    .letter .firma { margin-top: 40px; text-align: right; font-style: italic; color: #e0e0e0; }
-
-    .letter .firma img {
-      display: block;
-      margin-left: auto;
-      margin-top: 10px;
-      height: 60px;
-      filter: invert(1) brightness(1.4);
-      opacity: 0.9;
-    }
-
-    .nota {
-      font-size: 0.8rem;
-      color: #9a9a9a;
-      text-align: center;
-      margin-top: 18px;
-      font-style: italic;
-    }
-
-    .contacto {
-      text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid rgba(255,255,255,0.15);
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-      margin-bottom: 50px;
-    }
-
-    .contacto h2 { font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 16px; color: #ffffff; }
+    section { margin-bottom: 56px; }
+    section h2 { font-size: 1.15rem; letter-spacing: 4px; text-transform: uppercase; color: #c9a227; margin-bottom: 22px; font-weight: 400; }
+    section p { margin-bottom: 16px; text-align: justify; font-size: 1.05rem; }
+    .topics { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 10px; }
+    .topics .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); border-radius: 4px; padding: 20px; }
+    .topics .card h3 { font-size: 1rem; color: #ffffff; margin-bottom: 8px; }
+    .topics .card p { font-size: 0.95rem; margin-bottom: 0; color: #cfcfcf; }
+    .contacto { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .contacto h2 { font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 16px; color: #ffffff; text-transform: none; }
     .contacto p { font-size: 1.1rem; margin-bottom: 10px; }
-
-    .contacto a {
-      color: #c9a227;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.25rem;
-      border-bottom: 1px solid #c9a227;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
+    .contacto a { color: #c9a227; text-decoration: none; font-weight: bold; font-size: 1.25rem; border-bottom: 1px solid #c9a227; transition: color 0.2s, border-color 0.2s; }
     .contacto a:hover { color: #ffffff; border-color: #ffffff; }
-
     footer { text-align: center; font-size: 0.85rem; color: #9a9a9a; line-height: 1.6; }
     footer strong { color: #d8d8d8; }
-
     @media (max-width: 600px) {
-      .letter { padding: 32px 22px; }
-      .letter p { font-size: 1rem; }
+      .container { padding: 48px 18px 60px; }
       .lang-switch { top: 10px; right: 10px; }
       .lang-switch button { padding: 5px 10px; font-size: 0.8rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- SELECTOR DE IDIOMA -->
   <div class="lang-switch" role="group" aria-label="Language / Idioma">
     <button id="btn-es" class="active" onclick="setLang('es')" aria-pressed="true">ES</button>
     <button id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
   </div>
-
   <div class="container">
-
     <header>
-      <h1>
-        <span data-i18n="title.main">Synthesis Logic</span>
-        <span data-i18n="title.sub">La comunidad de los lógicos</span>
-      </h1>
-      <p class="tagline" data-i18n="tagline">«Donde el pensamiento se vuelve estructura.»</p>
+      <h1><span data-i18n="title.main">Synthesis Logic</span><span data-i18n="title.sub">Comunidad de lógica</span></h1>
+      <p class="tagline" data-i18n="tagline">«Pensar con rigor, corregir sin miedo.»</p>
     </header>
-
-    <section class="letter">
-      <h2 data-i18n="letter.title">Carta a los que piensan</h2>
-
-      <p data-i18n="letter.p1">A quien lea estas líneas:</p>
-      <p data-i18n="letter.p2">
-        No escribo para convencer, sino para invitar. La lógica no es un conjunto
-        de reglas muertas ni un adorno intelectual: es el esfuerzo más honesto
-        que conozco por decir las cosas de modo que puedan ser verdaderas o falsas.
-        Quien la cultiva aprende a desconfiar de sus propias certezas, y eso es
-        el principio de toda lucidez.
-      </p>
-      <p data-i18n="letter.p3">
-        He pasado mi vida mostrando que ningún sistema suficientemente expresivo
-        puede contener todas sus verdades. No lo digo como derrota, sino como
-        humildad: el límite no es un defecto del pensamiento, es su condición.
-        Quien comprende esto deja de buscar el fundamento último y empieza a
-        construir con rigor sobre lo que tiene.
-      </p>
-      <p data-i18n="letter.p4">
-        Si compartes esta disposición —la de pensar con cuidado, la de corregirte
-        sin miedo, la de preferir una pregunta bien planteada a una respuesta
-        cómoda—, esta comunidad es tu casa. No pedimos títulos ni erudición.
-        Pedimos honestidad intelectual y ganas de ejercer el pensamiento, no solo
-        de hablar de él.
-      </p>
-      <p data-i18n="letter.p5">Bienvenido seas.</p>
-
-      <div class="firma">
-        <span data-i18n="letter.sign">— Un homenaje a Kurt Gödel</span>
-        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Kurt_G%C3%B6del_signature.svg/1920px-Kurt_G%C3%B6del_signature.svg.png" alt="Firma de Kurt Gödel / Kurt Gödel signature" />
-      </div>
-
-      <p class="nota" data-i18n="letter.note">
-        Texto de homenaje ficticio, inspirado en el espíritu del pensamiento de Gödel.
-        No es una carta real del autor. La firma es una imagen de dominio público
-        procedente de Wikimedia Commons.
-      </p>
+    <section>
+      <h2 data-i18n="about.title">Qué es Synthesis Logic</h2>
+      <p data-i18n="about.p1">Synthesis Logic es una comunidad bilingüe (español/inglés) para discutir lógica formal, filosofía de la lógica, teoría de modelos, teoría de la computabilidad y fundamentos de la matemática. No es un club de fans ni un espacio de divulgación superficial: es un lugar para argumentar, corregir y ser corregido.</p>
+      <p data-i18n="about.p2">No pedimos títulos ni erudición. Pedimos disposición a exponer una idea con claridad, a recibir objeciones y a cambiarla si las objeciones son mejores que la idea.</p>
     </section>
-
+    <section>
+      <h2 data-i18n="topics.title">Qué se discute</h2>
+      <div class="topics">
+        <div class="card"><h3 data-i18n="topics.t1.title">Lógica formal</h3><p data-i18n="topics.t1.desc">Cálculo proposicional y de predicados, deducción natural, sistemas axiomáticos, completitud e incompletitud.</p></div>
+        <div class="card"><h3 data-i18n="topics.t2.title">Filosofía de la lógica</h3><p data-i18n="topics.t2.desc">Verdad, referencia, necesidad, paradojas semánticas, el estatus de las leyes lógicas.</p></div>
+        <div class="card"><h3 data-i18n="topics.t3.title">Teoría de modelos</h3><p data-i18n="topics.t3.desc">Estructuras, satisfacibilidad, compactitud, teoremas de Löwenheim-Skolem.</p></div>
+        <div class="card"><h3 data-i18n="topics.t4.title">Fundamentos</h3><p data-i18n="topics.t4.desc">Teoría de conjuntos, computabilidad, los teoremas de Gödel y sus interpretaciones.</p></div>
+      </div>
+    </section>
     <section class="contacto">
-      <h2 data-i18n="contact.title">¿Quieres pertenecer?</h2>
+      <h2 data-i18n="contact.title">¿Quieres unirte?</h2>
       <p data-i18n="contact.text">Escribe al correo de admisión:</p>
       <p><a href="mailto:avicola56@gmail.com">avicola56@gmail.com</a></p>
-      <p style="margin-top:18px; font-size:0.95rem; color:#bdbdbd;" data-i18n="contact.founder">
-        Director y fundador: <strong>Daniel Gascón</strong>
-      </p>
+      <p style="margin-top:18px; font-size:0.95rem; color:#bdbdbd;" data-i18n="contact.founder">Director y fundador: <strong>Daniel Gascón</strong></p>
     </section>
-
     <footer>
-      <p data-i18n="footer.line1"><strong>Synthesis Logic</strong> — La mejor comunidad del mundo para lógicos.</p>
+      <p data-i18n="footer.line1"><strong>Synthesis Logic</strong> — Comunidad bilingüe de lógica.</p>
       <p data-i18n="footer.line2">© 2026 · Fundada por Daniel Gascón</p>
     </footer>
-
   </div>
-
-  <!-- ================= SCRIPT DE TRADUCCIÓN ================= -->
   <script>
     const translations = {
       es: {
         "title.main": "Synthesis Logic",
-        "title.sub": "La comunidad de los lógicos",
-        "tagline": "«Donde el pensamiento se vuelve estructura.»",
-        "letter.title": "Carta a los que piensan",
-        "letter.p1": "A quien lea estas líneas:",
-        "letter.p2": "No escribo para convencer, sino para invitar. La lógica no es un conjunto de reglas muertas ni un adorno intelectual: es el esfuerzo más honesto que conozco por decir las cosas de modo que puedan ser verdaderas o falsas. Quien la cultiva aprende a desconfiar de sus propias certezas, y eso es el principio de toda lucidez.",
-        "letter.p3": "He pasado mi vida mostrando que ningún sistema suficientemente expresivo puede contener todas sus verdades. No lo digo como derrota, sino como humildad: el límite no es un defecto del pensamiento, es su condición. Quien comprende esto deja de buscar el fundamento último y empieza a construir con rigor sobre lo que tiene.",
-        "letter.p4": "Si compartes esta disposición —la de pensar con cuidado, la de corregirte sin miedo, la de preferir una pregunta bien planteada a una respuesta cómoda—, esta comunidad es tu casa. No pedimos títulos ni erudición. Pedimos honestidad intelectual y ganas de ejercer el pensamiento, no solo de hablar de él.",
-        "letter.p5": "Bienvenido seas.",
-        "letter.sign": "— Un homenaje a Kurt Gödel",
-        "letter.note": "Texto de homenaje ficticio, inspirado en el espíritu del pensamiento de Gödel. No es una carta real del autor. La firma es una imagen de dominio público procedente de Wikimedia Commons.",
-        "contact.title": "¿Quieres pertenecer?",
+        "title.sub": "Comunidad de lógica",
+        "tagline": "«Pensar con rigor, corregir sin miedo.»",
+        "about.title": "Qué es Synthesis Logic",
+        "about.p1": "Synthesis Logic es una comunidad bilingüe (español/inglés) para discutir lógica formal, filosofía de la lógica, teoría de modelos, teoría de la computabilidad y fundamentos de la matemática. No es un club de fans ni un espacio de divulgación superficial: es un lugar para argumentar, corregir y ser corregido.",
+        "about.p2": "No pedimos títulos ni erudición. Pedimos disposición a exponer una idea con claridad, a recibir objeciones y a cambiarla si las objeciones son mejores que la idea.",
+        "topics.title": "Qué se discute",
+        "topics.t1.title": "Lógica formal",
+        "topics.t1.desc": "Cálculo proposicional y de predicados, deducción natural, sistemas axiomáticos, completitud e incompletitud.",
+        "topics.t2.title": "Filosofía de la lógica",
+        "topics.t2.desc": "Verdad, referencia, necesidad, paradojas semánticas, el estatus de las leyes lógicas.",
+        "topics.t3.title": "Teoría de modelos",
+        "topics.t3.desc": "Estructuras, satisfacibilidad, compactitud, teoremas de Löwenheim-Skolem.",
+        "topics.t4.title": "Fundamentos",
+        "topics.t4.desc": "Teoría de conjuntos, computabilidad, los teoremas de Gödel y sus interpretaciones.",
+        "contact.title": "¿Quieres unirte?",
         "contact.text": "Escribe al correo de admisión:",
         "contact.founder": "Director y fundador: <strong>Daniel Gascón</strong>",
-        "footer.line1": "<strong>Synthesis Logic</strong> — La mejor comunidad del mundo para lógicos.",
+        "footer.line1": "<strong>Synthesis Logic</strong> — Comunidad bilingüe de lógica.",
         "footer.line2": "© 2026 · Fundada por Daniel Gascón"
       },
       en: {
         "title.main": "Synthesis Logic",
-        "title.sub": "The community of logicians",
-        "tagline": "«Where thought becomes structure.»",
-        "letter.title": "A letter to those who think",
-        "letter.p1": "To whoever reads these lines:",
-        "letter.p2": "I do not write to convince, but to invite. Logic is not a set of dead rules or an intellectual ornament: it is the most honest effort I know to say things in such a way that they can be true or false. Whoever cultivates it learns to distrust their own certainties, and that is the beginning of all lucidity.",
-        "letter.p3": "I have spent my life showing that no sufficiently expressive system can contain all of its truths. I do not say this as defeat, but as humility: the limit is not a defect of thought, it is its condition. Whoever understands this stops seeking the ultimate foundation and begins to build rigorously upon what they have.",
-        "letter.p4": "If you share this disposition — that of thinking carefully, of correcting yourself without fear, of preferring a well-posed question to a comfortable answer — this community is your home. We ask for no titles or erudition. We ask for intellectual honesty and the desire to exercise thought, not merely to talk about it.",
-        "letter.p5": "Welcome.",
-        "letter.sign": "— A tribute to Kurt Gödel",
-        "letter.note": "Fictional tribute text, inspired by the spirit of Gödel's thought. It is not a real letter by the author. The signature is a public-domain image from Wikimedia Commons.",
+        "title.sub": "Logic community",
+        "tagline": "«Think rigorously, correct without fear.»",
+        "about.title": "What Synthesis Logic is",
+        "about.p1": "Synthesis Logic is a bilingual (Spanish/English) community for discussing formal logic, philosophy of logic, model theory, computability theory and foundations of mathematics. It is not a fan club or a space for superficial outreach: it is a place to argue, to correct, and to be corrected.",
+        "about.p2": "We ask for no titles or erudition. We ask for the willingness to state an idea clearly, to receive objections, and to change it if the objections are better than the idea.",
+        "topics.title": "What we discuss",
+        "topics.t1.title": "Formal logic",
+        "topics.t1.desc": "Propositional and predicate calculus, natural deduction, axiomatic systems, completeness and incompleteness.",
+        "topics.t2.title": "Philosophy of logic",
+        "topics.t2.desc": "Truth, reference, necessity, semantic paradoxes, the status of logical laws.",
+        "topics.t3.title": "Model theory",
+        "topics.t3.desc": "Structures, satisfiability, compactness, Löwenheim-Skolem theorems.",
+        "topics.t4.title": "Foundations",
+        "topics.t4.desc": "Set theory, computability, Gödel's theorems and their interpretations.",
         "contact.title": "Want to join?",
         "contact.text": "Write to the admission email:",
         "contact.founder": "Director and founder: <strong>Daniel Gascón</strong>",
-        "footer.line1": "<strong>Synthesis Logic</strong> — The best community in the world for logicians.",
+        "footer.line1": "<strong>Synthesis Logic</strong> — Bilingual logic community.",
         "footer.line2": "© 2026 · Founded by Daniel Gascón"
       }
     };
-
     function setLang(lang) {
-      // Traducir todos los elementos con data-i18n
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.innerHTML = translations[lang][key];
-        }
+        if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
       });
-
-      // Actualizar atributos del documento
       document.documentElement.lang = lang;
-      document.title = lang === 'es'
-        ? "Synthesis Logic — La comunidad de los lógicos | The community of logicians"
-        : "Synthesis Logic — The community of logicians | La comunidad de los lógicos";
-
+      document.title = lang === 'es' ? "Synthesis Logic — Comunidad de lógica | Logic Community" : "Synthesis Logic — Logic Community | Comunidad de lógica";
       const desc = document.querySelector('meta[name="description"]');
-      if (desc) {
-        desc.setAttribute('content', lang === 'es'
-          ? "Synthesis Logic es la comunidad de los lógicos: un espacio para pensar con rigor, corregir sin miedo y ejercer la lógica. Bilingual ES/EN. Fundada por Daniel Gascón."
-          : "Synthesis Logic is the community of logicians: a space to think rigorously, correct yourself without fear, and exercise logic. Bilingual ES/EN. Founded by Daniel Gascón.");
-      }
-
-      // Botones activos
+      if (desc) desc.setAttribute('content', lang === 'es'
+        ? "Synthesis Logic es una comunidad bilingüe (ES/EN) para discutir lógica formal, filosofía de la lógica, teoría de modelos, computabilidad e incompletitud. Fundada por Daniel Gascón. Únete: avicola56@gmail.com."
+        : "Synthesis Logic is a bilingual (ES/EN) community for discussing formal logic, philosophy of logic, model theory, computability and incompleteness. Founded by Daniel Gascón. Join: avicola56@gmail.com.");
       document.getElementById('btn-es').classList.toggle('active', lang === 'es');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
       document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
-
-      // Guardar preferencia
       try { localStorage.setItem('synthesislang', lang); } catch(e) {}
-
-      // Actualizar URL sin recargar
       const url = new URL(window.location);
       if (lang === 'en') url.searchParams.set('lang', 'en');
       else url.searchParams.delete('lang');
       history.replaceState({}, '', url);
     }
-
-    // Inicialización: prioridad URL > localStorage > navegador > español
     (function initLang() {
       const params = new URLSearchParams(window.location.search);
       let lang = params.get('lang');
-      if (!lang) {
-        try { lang = localStorage.getItem('synthesislang'); } catch(e) {}
-      }
-      if (!lang) {
-        lang = (navigator.language || 'es').toLowerCase().startsWith('en') ? 'en' : 'es';
-      }
+      if (!lang) { try { lang = localStorage.getItem('synthesislang'); } catch(e) {} }
+      if (!lang) { lang = (navigator.language || 'es').toLowerCase().startsWith('en') ? 'en' : 'es'; }
       setLang(lang === 'en' ? 'en' : 'es');
     })();
   </script>
